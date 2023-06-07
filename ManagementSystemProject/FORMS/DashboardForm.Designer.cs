@@ -474,6 +474,7 @@
             this.ClientSize = new System.Drawing.Size(1136, 541);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardForm";
             this.Text = "DashboardForm";
             this.Load += new System.EventHandler(this.DashboardForm_Load);
