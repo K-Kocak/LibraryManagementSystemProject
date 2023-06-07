@@ -518,7 +518,7 @@
             this.richTextBoxNote2.Size = new System.Drawing.Size(202, 157);
             this.richTextBoxNote2.TabIndex = 69;
             this.richTextBoxNote2.Text = "";
-            this.richTextBoxNote2.TextChanged += new System.EventHandler(this.richTextBoxNote2_TextChanged);
+            
             // 
             // dateTimePickerReturnDate2
             // 
@@ -527,7 +527,7 @@
             this.dateTimePickerReturnDate2.Name = "dateTimePickerReturnDate2";
             this.dateTimePickerReturnDate2.Size = new System.Drawing.Size(144, 20);
             this.dateTimePickerReturnDate2.TabIndex = 68;
-            this.dateTimePickerReturnDate2.ValueChanged += new System.EventHandler(this.dateTimePickerReturnDate2_ValueChanged);
+          
             // 
             // dateTimePickerIssueDate2
             // 
@@ -537,7 +537,7 @@
             this.dateTimePickerIssueDate2.Name = "dateTimePickerIssueDate2";
             this.dateTimePickerIssueDate2.Size = new System.Drawing.Size(144, 20);
             this.dateTimePickerIssueDate2.TabIndex = 67;
-            this.dateTimePickerIssueDate2.ValueChanged += new System.EventHandler(this.dateTimePickerIssueDate2_ValueChanged);
+          
             // 
             // label5
             // 
@@ -580,7 +580,7 @@
             this.labelMember2.Size = new System.Drawing.Size(131, 20);
             this.labelMember2.TabIndex = 61;
             this.labelMember2.Text = "Member fullname";
-            this.labelMember2.Click += new System.EventHandler(this.labelMember2_Click);
+           
             // 
             // labelTitle2
             // 
@@ -593,7 +593,7 @@
             this.labelTitle2.Size = new System.Drawing.Size(75, 20);
             this.labelTitle2.TabIndex = 60;
             this.labelTitle2.Text = "Book title";
-            this.labelTitle2.Click += new System.EventHandler(this.labelTitle2_Click);
+           
             // 
             // numericUpDownBookID2
             // 
@@ -609,7 +609,7 @@
             this.numericUpDownBookID2.Name = "numericUpDownBookID2";
             this.numericUpDownBookID2.Size = new System.Drawing.Size(140, 23);
             this.numericUpDownBookID2.TabIndex = 59;
-            this.numericUpDownBookID2.ValueChanged += new System.EventHandler(this.numericUpDownBookID2_ValueChanged);
+          
             // 
             // label15
             // 
@@ -630,7 +630,7 @@
             this.numericUpDownMemberID2.Name = "numericUpDownMemberID2";
             this.numericUpDownMemberID2.Size = new System.Drawing.Size(140, 23);
             this.numericUpDownMemberID2.TabIndex = 57;
-            this.numericUpDownMemberID2.ValueChanged += new System.EventHandler(this.numericUpDownMemberID2_ValueChanged);
+        
             // 
             // label16
             // 

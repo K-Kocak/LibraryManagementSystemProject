@@ -293,39 +293,6 @@ namespace ManagementSystemProject.FORMS
             dataGridViewIssuedBook.DataSource = issueBook.IssueBookList("");
         }
 
-        private void richTextBoxNote2_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void dateTimePickerReturnDate2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerIssueDate2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDownMemberID2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDownBookID2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelTitle2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelMember2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
