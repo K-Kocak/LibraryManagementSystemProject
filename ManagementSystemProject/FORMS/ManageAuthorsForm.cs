@@ -158,12 +158,12 @@ namespace ManagementSystemProject.FORMS
         private void buttonExportAuthors_Click(object sender, EventArgs e)
         {
 
-            if(!Directory.Exists(@"C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\authors"))
+            if(!Directory.Exists("../authors"))
             {
-                Directory.CreateDirectory(@"C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\authors");
+                Directory.CreateDirectory("../authors");
             }
 
-            string filePath = @"C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\authors\list.txt";
+            string filePath = "../authors/List.txt";
 
             if(!File.Exists(filePath))
             {

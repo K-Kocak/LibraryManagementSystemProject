@@ -357,12 +357,12 @@ namespace ManagementSystemProject.FORMS
 
             showBookListButton.PerformClick();
 
-            if (!Directory.Exists(@"C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\books"))
+            if (!Directory.Exists("../books"))
             {
-                Directory.CreateDirectory(@"C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\books");
+                Directory.CreateDirectory("../books");
             }
 
-            string filePath = @"C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\books\booklist.txt";
+            string filePath = "../books/booklist.txt";
 
             if (!File.Exists(filePath))
             {
