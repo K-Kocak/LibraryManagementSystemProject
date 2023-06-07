@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21DC78F3-6E98-42ED-9B69-8D043749A66C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ManagementSystemProject</RootNamespace>
+    <AssemblyName>ManagementSystemProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.0.33\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASSES\AUTHOR.cs" />
+    <Compile Include="CLASSES\BOOKS.cs" />
+    <Compile Include="CLASSES\GENRE.cs" />
+    <Compile Include="CLASSES\ISSUEBOOK.cs" />
+    <Compile Include="CLASSES\MEMBER.cs" />
+    <Compile Include="CLASSES\USERS.cs" />
+    <Compile Include="FORMS\AuthorListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\AuthorListForm.Designer.cs">
+      <DependentUpon>AuthorListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\BookInfoCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\BookInfoCardForm.Designer.cs">
+      <DependentUpon>BookInfoCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\BooksListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\BooksListForm.Designer.cs">
+      <DependentUpon>BooksListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ManageAuthorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ManageAuthorsForm.Designer.cs">
+      <DependentUpon>ManageAuthorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ManageBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ManageBooksForm.Designer.cs">
+      <DependentUpon>ManageBooksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ManageCirculationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ManageCirculationForm.Designer.cs">
+      <DependentUpon>ManageCirculationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ManageGenresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ManageGenresForm.Designer.cs">
+      <DependentUpon>ManageGenresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ManageMembersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ManageMembersForm.Designer.cs">
+      <DependentUpon>ManageMembersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ManageUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ManageUserForm.Designer.cs">
+      <DependentUpon>ManageUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\MemberInfoCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\MemberInfoCard.Designer.cs">
+      <DependentUpon>MemberInfoCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RemoveBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\RemoveBookForm.Designer.cs">
+      <DependentUpon>RemoveBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="THE-DATABASE\MYDB.cs" />
+    <EmbeddedResource Include="FORMS\AuthorListForm.resx">
+      <DependentUpon>AuthorListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\BookInfoCardForm.resx">
+      <DependentUpon>BookInfoCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\BooksListForm.resx">
+      <DependentUpon>BooksListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ManageAuthorsForm.resx">
+      <DependentUpon>ManageAuthorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ManageBooksForm.resx">
+      <DependentUpon>ManageBooksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ManageCirculationForm.resx">
+      <DependentUpon>ManageCirculationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ManageGenresForm.resx">
+      <DependentUpon>ManageGenresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ManageMembersForm.resx">
+      <DependentUpon>ManageMembersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ManageUserForm.resx">
+      <DependentUpon>ManageUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\MemberInfoCard.resx">
+      <DependentUpon>MemberInfoCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\RemoveBookForm.resx">
+      <DependentUpon>RemoveBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="IMAGES\addbutton.png" />
+    <Content Include="IMAGES\bookimage.png" />
+    <Content Include="IMAGES\circulationimage.png" />
+    <Content Include="IMAGES\closebuttonimage2.png" />
+    <Content Include="IMAGES\deletebutton.png" />
+    <Content Include="IMAGES\editbutton.png" />
+    <Content Include="IMAGES\labelimage.png" />
+    <Content Include="IMAGES\lockimage.png" />
+    <Content Include="IMAGES\penimage.png" />
+    <Content Include="IMAGES\randombookcover.png" />
+    <Content Include="IMAGES\userimage.png" />
+    <Content Include="IMAGES\userimage2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
