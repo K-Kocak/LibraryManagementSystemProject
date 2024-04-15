@@ -8,7 +8,6 @@ C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProj
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\bin\Debug\System.Buffers.dll
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\bin\Debug\MySql.Data.xml
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.csproj.AssemblyReference.cache
-C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.csproj.SuggestedBindingRedirects.cache
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.FORMS.AuthorListForm.resources
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.FORMS.BookInfoCardForm.resources
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.FORMS.BooksListForm.resources
@@ -25,6 +24,6 @@ C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProj
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.Properties.Resources.resources
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.csproj.GenerateResource.cache
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.csproj.CoreCompileInputs.cache
-C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.csproj.CopyComplete
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.exe
 C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\ManagementSystemProject.pdb
+C:\Users\kemal-noadmin\source\repos\ManagementSystemProject\ManagementSystemProject\obj\Debug\Manageme.14E564CA.Up2Date
