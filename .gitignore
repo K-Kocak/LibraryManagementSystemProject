@@ -147,3 +147,5 @@ publish/
 *.nupkg
 # The packages folder can be ignored because of Package Restore
 **/packages/*
+/.vs/ManagementSystemProject/v17/.suo
+/.vs/ManagementSystemProject/v17/DocumentLayout.json
