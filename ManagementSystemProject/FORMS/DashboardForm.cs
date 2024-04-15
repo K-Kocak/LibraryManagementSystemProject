@@ -107,6 +107,7 @@ namespace ManagementSystemProject.FORMS
         private void bookButton_Click(object sender, EventArgs e)
         {
             // Opens the "books" form
+
             SelectedButton(bookButton);
             ManageBooksForm mngBookF = new ManageBooksForm();
             mngBookF.Show();
