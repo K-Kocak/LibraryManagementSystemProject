@@ -13,6 +13,7 @@ namespace ManagementSystemProject.FORMS
 {
     public partial class LoginForm : Form
     {
+        private DashboardForm dashF = null;
         public LoginForm()
         {
             InitializeComponent();
@@ -43,8 +44,7 @@ namespace ManagementSystemProject.FORMS
         {          
             Application.Exit();
         }
-
-        private DashboardForm dashF = null;
+      
         public LoginForm(DashboardForm SourceForm)
         {
             dashF = SourceForm as DashboardForm;
@@ -100,7 +100,6 @@ namespace ManagementSystemProject.FORMS
                 if(username.Trim().Equals(""))
                 {
                     MessageBox.Show("Enter your username to login.","Empty Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
                 else if(password.Trim().Equals(""))
                 {
