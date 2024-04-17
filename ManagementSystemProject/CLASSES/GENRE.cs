@@ -26,8 +26,7 @@ namespace ManagementSystemProject.CLASSES
             else
             {
                 return false;
-            }
-            
+            }         
         }
 
         public bool editGenre(int id, string name)
@@ -65,7 +64,6 @@ namespace ManagementSystemProject.CLASSES
                 return false;
             } 
         }
-
         public DataTable GenresList()
         {
             DataTable table = new DataTable();

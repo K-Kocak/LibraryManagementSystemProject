@@ -13,14 +13,14 @@ namespace ManagementSystemProject.FORMS
 {
     public partial class ManageGenresForm : Form
     {
+        CLASSES.GENRE genre = new CLASSES.GENRE();
         public ManageGenresForm()
         {
             InitializeComponent();
-        }
-
-        CLASSES.GENRE genre = new CLASSES.GENRE();
+        }     
         private void ManageGenresForm_Load(object sender, EventArgs e)
         {
+            // loads images and database for the UI
             addButton.Image = Image.FromFile("../../IMAGES/addbutton.png");
             editButton.Image = Image.FromFile("../../IMAGES/editbutton.png");
             deleteButton.Image = Image.FromFile("../../IMAGES/deletebutton.png");
@@ -30,18 +30,15 @@ namespace ManagementSystemProject.FORMS
             dataGridViewGenres.ColumnHeadersDefaultCellStyle.ForeColor = Color.Blue;
             dataGridViewGenres.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
             dataGridViewGenres.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
             dataGridViewGenres.EnableHeadersVisualStyles = false;
         }
         private void closeWindow_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void addButton_Click(object sender, EventArgs e)
         {
-            string name = nameTextbox.Text;
-
+            string name = nameTextbox.Text;           
             if(name.Trim().Equals(""))
             {
                 MessageBox.Show("Enter the Genre Name", "Empty Genre Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
