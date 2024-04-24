@@ -172,6 +172,7 @@ namespace ManagementSystemProject.CLASSES
 
         public DataTable searchByIDOrISBN(string idOrISBN, int id, string isbn)
         {
+            //checks if idorISBN is the id, finds book where id is equal, else find isbn that is equal
             string query;
             MySqlParameter[] parameters = new MySqlParameter[1];
             if (idOrISBN.Equals("id"))
