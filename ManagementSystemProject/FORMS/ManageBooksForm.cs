@@ -183,13 +183,17 @@ namespace ManagementSystemProject.FORMS
 
         private void searchIDButton_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(IDEditTextbox.Text);
+            int id;
+            bool validID = Int32.TryParse(IDEditTextbox.Text, out id);
+            if (!validID) {
+                MessageBox.Show("Please enter an ID.", "No ID Entered", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            } 
+
             DataTable data = book.searchByIDOrISBN("id", id, "");
             if(data.Rows.Count > 0)
             {
                 DisplayData(data);
-
-              
             }
             else
             {
@@ -209,7 +213,7 @@ namespace ManagementSystemProject.FORMS
             }
             else
             {
-                MessageBox.Show("This Book ID does not exist.", "No ID Found", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("No Book ID exists with this ISBN.", "No ID Found", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 

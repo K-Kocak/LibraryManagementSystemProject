@@ -172,7 +172,7 @@ namespace ManagementSystemProject.CLASSES
 
         public DataTable searchByIDOrISBN(string idOrISBN, int id, string isbn)
         {
-            //checks if idorISBN is the id, finds book where id is equal, else find isbn that is equal
+            //this function handles search by ISBN and search by ID button
             string query;
             MySqlParameter[] parameters = new MySqlParameter[1];
             if (idOrISBN.Equals("id"))
@@ -207,6 +207,7 @@ namespace ManagementSystemProject.CLASSES
 
         public bool bookQuantityMinusOne(int bookID)
         {
+            //used in circulation form for when a book is lost, reduces quantity by 1
             string query = "UPDATE `books` SET `quantity`=quantity-1 WHERE `id`=@bID";
             MySqlParameter[] parameter = new MySqlParameter[1];
 
