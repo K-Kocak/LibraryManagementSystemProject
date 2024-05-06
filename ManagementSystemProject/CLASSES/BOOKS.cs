@@ -37,14 +37,7 @@ namespace ManagementSystemProject.CLASSES
             parameter[9] = new MySqlParameter("@img", MySqlDbType.Blob);
             parameter[9].Value = cover;
             // return true if it was able to successfully insert the new book
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return db.setData(query, parameter) == 1;
         }
 
         public bool editBook(int id, string isbn, string title, int authorID, int genreID,
@@ -76,15 +69,7 @@ namespace ManagementSystemProject.CLASSES
             parameter[9].Value = cover;
             parameter[10] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[10].Value = id;
-
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return db.setData(query, parameter) == 1;
         }
 
         public bool deleteBook(int id)
@@ -94,14 +79,7 @@ namespace ManagementSystemProject.CLASSES
             MySqlParameter[] parameter = new MySqlParameter[1];
             parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[0].Value = id;
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return db.setData(query, parameter) == 1;
         }
 
         public DataTable BookList()
@@ -122,8 +100,7 @@ namespace ManagementSystemProject.CLASSES
             parameters[0].Value = authorID;            
             DataTable table = new DataTable();
             table = db.getData(query, parameters);
-
-            return table;
+            return table;            
         }
 
         public Boolean isISBNExists(string isbn, int id) 
@@ -138,14 +115,7 @@ namespace ManagementSystemProject.CLASSES
 
             DataTable table = new DataTable();
             table = db.getData(query, parameters);
-            if(table.Rows.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return table.Rows.Count > 0;
         }
 
         public Boolean isTitleExists(string title, int id)
@@ -160,14 +130,7 @@ namespace ManagementSystemProject.CLASSES
 
             DataTable table = new DataTable();
             table = db.getData(query, parameters);
-            if (table.Rows.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return table.Rows.Count > 0;
         }
 
         public DataTable searchByIDOrISBN(string idOrISBN, int id, string isbn)
@@ -210,18 +173,9 @@ namespace ManagementSystemProject.CLASSES
             //used in circulation form for when a book is lost, reduces quantity by 1
             string query = "UPDATE `books` SET `quantity`=quantity-1 WHERE `id`=@bID";
             MySqlParameter[] parameter = new MySqlParameter[1];
-
             parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[0].Value = bookID;
-
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return db.setData(query, parameter) == 1;
         }
 
     }

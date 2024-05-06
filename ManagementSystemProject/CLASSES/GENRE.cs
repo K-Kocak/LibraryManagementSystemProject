@@ -19,15 +19,7 @@ namespace ManagementSystemProject.CLASSES
             MySqlParameter[] parameter = new MySqlParameter[1];
             parameter[0] = new MySqlParameter("@genre_name", MySqlDbType.VarChar);
             parameter[0].Value = name;
-
-            if(db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }         
+            return db.setData(query, parameter) == 1;   
         }
 
         public bool editGenre(int id, string name)
@@ -39,14 +31,7 @@ namespace ManagementSystemProject.CLASSES
             parameter[0].Value = name;
             parameter[1] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[1].Value = id;
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return db.setData(query, parameter) == 1;
         }
         public bool removeGenre(int id) 
         {
@@ -56,14 +41,7 @@ namespace ManagementSystemProject.CLASSES
             parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[0].Value = id;
             // return true if successful, false otherwise
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            } 
+            return db.setData(query, parameter) == 1;
         }
         public DataTable GenresList()
         {

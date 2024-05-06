@@ -25,15 +25,7 @@ namespace ManagementSystemProject.CLASSES
             parameter[3] = new MySqlParameter("@abo", MySqlDbType.VarChar);
             parameter[3].Value = about;
             // If succesful, returns true to indicate to the user that the author was added succesfully 
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+            return db.setData(query, parameter) == 1;
         }
 
         public bool editAuthor(int id, string fname, string sname, string edu, string about)
@@ -52,15 +44,7 @@ namespace ManagementSystemProject.CLASSES
             parameter[4] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[4].Value = id;
             // user feedback
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+            return db.setData(query, parameter) == 1;
         }
 
         public bool removeAuthor(int id)
@@ -71,14 +55,7 @@ namespace ManagementSystemProject.CLASSES
             parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[0].Value = id;
             //user feedback
-            if (db.setData(query, parameter) == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return db.setData(query, parameter) == 1;
         }
 
         public DataTable AuthorList(Boolean displayFullName)
