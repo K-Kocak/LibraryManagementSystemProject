@@ -1,7 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-
 namespace ManagementSystemProject.CLASSES
 {
     internal class ISSUEBOOK

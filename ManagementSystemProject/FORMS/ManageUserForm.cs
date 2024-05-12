@@ -1,59 +1,47 @@
-﻿using ManagementSystemProject.CLASSES;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
 namespace ManagementSystemProject.FORMS
 {
     public partial class ManageUserForm : Form
     {
+        CLASSES.USERS users = new CLASSES.USERS();
         public ManageUserForm()
         {
             InitializeComponent();
         }
 
-        CLASSES.USERS users = new CLASSES.USERS();
-
         private void closeWindow1_Click(object sender, EventArgs e)
         {
+            // close form
             this.Close();
         }
 
         private void ManageUserForm_Load(object sender, EventArgs e)
         {
+            // grabs images that will be loaded in by default, gives some styles
             buttonAdd.Image = Image.FromFile("../../IMAGES/addbutton.png");
             buttonEdit.Image = Image.FromFile("../../IMAGES/editbutton.png");
             buttonDelete.Image = Image.FromFile("../../IMAGES/deletebutton.png");
             dataGridViewUsers.DataSource = users.UsersList();
-
             dataGridViewUsers.ColumnHeadersDefaultCellStyle.ForeColor = Color.Blue;
             dataGridViewUsers.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
             dataGridViewUsers.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
             dataGridViewUsers.EnableHeadersVisualStyles = false;
         }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            // when adding a new user, grabs the values inside some of the fields
             string fname = labelFirstname.Text;
             string sname = labelSurname.Text;
             string username = labelUsername.Text;
-            string password = labelPassword.Text;
-            
+            string password = labelPassword.Text;  
+            // by default, usertype is "user", but if the admin checkbox is ticked, changes usertype to admin
             string userType = "user";
-
             if (checkBoxAdmin.Checked)
             {
                 userType = "admin";
             }
-
 
             if(verify())
             {
@@ -192,23 +180,22 @@ namespace ManagementSystemProject.FORMS
             string username = labelUsername.Text.Trim();
             string password = labelPassword.Text.Trim();
             string repassword = labelPassword2.Text.Trim();
+            // if any fields were empty, return false
             if (fname.Equals("") || sname.Equals("") || username.Equals("") || password.Equals(""))
             {
                 return false;
             }
             else if (!repassword.Equals(password))
             {
+                // if re-enterpassword != password..
                 return false;
             }
             else
             {
+                // return true if previous two IF statements were false
                 return true;
             }
-
-
-        }
-
-            
+        }          
     }
 
 }
