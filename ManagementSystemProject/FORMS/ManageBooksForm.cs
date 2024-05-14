@@ -99,12 +99,12 @@ namespace ManagementSystemProject.FORMS
                 genreID = Convert.ToInt32(genreCombobox.SelectedValue);
                 quantity = Convert.ToInt32(numericUpDownQuantity.Value);
                 price = Convert.ToDouble(priceTextbox.Text);
-                if(!book.isISBNExists(isbn, 0))
+                if(!book.IsISBNExists(isbn, 0))
                 {
-                    if(!book.isTitleExists(title, 0))
+                    if(!book.IsTitleExists(title, 0))
                     {
                         // if the isbn and the title of the book don't exist, it will try to add this book to the database.
-                        if (book.addBook(isbn, title, authorID, genreID, quantity, price, publisher, dateReceived, about, bookCover))
+                        if (book.AddBook(isbn, title, authorID, genreID, quantity, price, publisher, dateReceived, about, bookCover))
                         {
                             MessageBox.Show("New Book has been added.", "New Book", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // updates total existing book count
@@ -195,7 +195,7 @@ namespace ManagementSystemProject.FORMS
                 return;
             } 
 
-            DataTable data = book.searchByIDOrISBN("id", id, "");
+            DataTable data = book.SearchByIDOrISBN("id", id, "");
             if(data.Rows.Count > 0)
             {
                 DisplayData(data);
@@ -210,7 +210,7 @@ namespace ManagementSystemProject.FORMS
         {
             // same as ID, but searches by isbn instead
             string isbn = ISBNEditTextbox.Text;
-            DataTable data = book.searchByIDOrISBN("isbn", 00, isbn);
+            DataTable data = book.SearchByIDOrISBN("isbn", 00, isbn);
             if (data.Rows.Count > 0)
             {
 
@@ -255,11 +255,11 @@ namespace ManagementSystemProject.FORMS
                 quantity = Convert.ToInt32(numericUpDownQuantityEdit.Value);
                 price = Convert.ToDouble(priceEditTextbox.Text);
 
-                if (!book.isISBNExists(isbn, id))
+                if (!book.IsISBNExists(isbn, id))
                 {
-                    if (!book.isTitleExists(title, id))
+                    if (!book.IsTitleExists(title, id))
                     {
-                        if (book.editBook(id, isbn, title, authorID, genreID, quantity, price, publisher, dateReceived, about, bookCover))
+                        if (book.EditBook(id, isbn, title, authorID, genreID, quantity, price, publisher, dateReceived, about, bookCover))
                         {
                             MessageBox.Show("Book data has been changed.", "Edit Book", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -341,7 +341,7 @@ namespace ManagementSystemProject.FORMS
             genreEditCombobox.DisplayMember = "name";
             genreEditCombobox.ValueMember = "id";
             int id = Convert.ToInt32(dataGridViewBookList.CurrentRow.Cells[0].Value);
-            DataTable data = book.searchByIDOrISBN("id", id, "");
+            DataTable data = book.SearchByIDOrISBN("id", id, "");
             if (data.Rows.Count > 0)
             {
                 DisplayData(data);
@@ -392,7 +392,7 @@ namespace ManagementSystemProject.FORMS
                 int bookID = Convert.ToInt32(dataGridViewBookList.CurrentRow.Cells[0].Value);
                 if (MessageBox.Show("Do you really want to delete this Book?", "Confirmation Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (book.deleteBook(bookID))
+                    if (book.DeleteBook(bookID))
                     {
                         MessageBox.Show("Book has been removed.", "Removed Book", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

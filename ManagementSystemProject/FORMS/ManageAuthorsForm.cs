@@ -57,7 +57,7 @@ namespace ManagementSystemProject.FORMS
             }
             else
             {
-                if (author.addAuthor(firstname, surname, education, about))
+                if (author.AddAuthor(firstname, surname, education, about))
                 {
                     MessageBox.Show("New Author has been added.", "New Author", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridViewAuthors.DataSource = author.AuthorList(false);
@@ -86,7 +86,7 @@ namespace ManagementSystemProject.FORMS
                 }
                 else
                 {
-                    if (author.editAuthor(id, firstname, surname, education, about))
+                    if (author.EditAuthor(id, firstname, surname, education, about))
                     {
                         MessageBox.Show("Author has been changed.", "Author Changed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dataGridViewAuthors.DataSource = author.AuthorList(false);
@@ -120,7 +120,7 @@ namespace ManagementSystemProject.FORMS
                 int id = Convert.ToInt32(idTextbox.Text);
                 if(MessageBox.Show("Do you really want to delete this Author?", "Confirmation Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (author.removeAuthor(id))
+                    if (author.RemoveAuthor(id))
                     {
                         MessageBox.Show("Author has been removed.", "Removed Author", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         idTextbox.Text = "";

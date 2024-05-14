@@ -38,7 +38,7 @@ namespace ManagementSystemProject.FORMS
         private void buttonSearchBook_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(numericUpDownBookID.Value);
-            DataTable table = books.searchByIDOrISBN("id", id, "");
+            DataTable table = books.SearchByIDOrISBN("id", id, "");
 
             
 
@@ -48,7 +48,7 @@ namespace ManagementSystemProject.FORMS
                 labelTitle.Text = table.Rows[0][2].ToString();
                 labelTitle.ForeColor = Color.DeepSkyBlue;
 
-                if (issueBook.checkBookAvailability(id))
+                if (issueBook.CheckBookAvailability(id))
                 {
                     labelAvailability.ForeColor = Color.Green;
                     labelAvailability.Text = "Yes";
@@ -70,7 +70,7 @@ namespace ManagementSystemProject.FORMS
         private void buttonSearchMember_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(numericUpDownMemberID.Value);
-            DataRow row = member.getMemberByID(id);
+            DataRow row = member.GetMemberByID(id);
 
             if (row != null)
             {
@@ -127,13 +127,13 @@ namespace ManagementSystemProject.FORMS
             string note = richTextBoxNote.Text;
             try
             {
-                if (issueBook.isBookStillIssuedByMember(memberID, bookID))
+                if (issueBook.IsBookStillIssuedByMember(memberID, bookID))
                 {
                     MessageBox.Show("A copy of this book is still issued to this member.", "Issued Book", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 else
                 {
-                    if (issueBook.checkBookAvailability(bookID))
+                    if (issueBook.CheckBookAvailability(bookID))
                     {
                         if (issueDate < returnDate)
                         {
@@ -182,11 +182,11 @@ namespace ManagementSystemProject.FORMS
             richTextBoxNote2.Text = dataGridViewIssuedBook.CurrentRow.Cells[5].Value.ToString();
 
             int bookID = Convert.ToInt32(numericUpDownBookID2.Value);
-            DataRow bookData = books.getBookInfo(bookID);
+            DataRow bookData = books.GetBookInfo(bookID);
             labelTitle2.Text = bookData["title"].ToString();
 
             int memberID = Convert.ToInt32(numericUpDownMemberID2.Value);
-            DataRow row = member.getMemberByID(memberID);
+            DataRow row = member.GetMemberByID(memberID);
 
 
             labelMember2.Text = row["firstname"] + " " + row["surname"].ToString();
@@ -204,11 +204,11 @@ namespace ManagementSystemProject.FORMS
 
             try
             {
-                if (issueBook.checkBookAvailability(bookID))
+                if (issueBook.CheckBookAvailability(bookID))
                 {
                     if (issueDate < returnDate)
                     {
-                        if (issueBook.returnBook(bookID, memberID, "returned", issueDate, returnDate, note))
+                        if (issueBook.ReturnBook(bookID, memberID, "returned", issueDate, returnDate, note))
                         {
                             MessageBox.Show("Book Returned", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -238,11 +238,11 @@ namespace ManagementSystemProject.FORMS
             
                 if (issueDate < returnDate)
                 {
-                    if (issueBook.returnBook(bookID, memberID, "lost", issueDate, issueDate, note))
+                    if (issueBook.ReturnBook(bookID, memberID, "lost", issueDate, issueDate, note))
                     {
                         MessageBox.Show("Book Lost", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        if (books.bookQuantityMinusOne(bookID))
+                        if (books.BookQuantityMinusOne(bookID))
                         {
                         MessageBox.Show("Book Quantity Updated.", "New Quantity Set", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -263,7 +263,7 @@ namespace ManagementSystemProject.FORMS
             DateTime issueDate = dateTimePickerIssueDate2.Value;
 
 
-            if(issueBook.removeBook(bookID, memberID, issueDate))
+            if(issueBook.RemoveBook(bookID, memberID, issueDate))
             {
                 MessageBox.Show("Data deleted.", "Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

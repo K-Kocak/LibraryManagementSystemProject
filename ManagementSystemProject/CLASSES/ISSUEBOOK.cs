@@ -26,40 +26,42 @@ namespace ManagementSystemProject.CLASSES
             parameter[4].Value = returnDate;
             parameter[5] = new MySqlParameter("@note", MySqlDbType.VarChar);
             parameter[5].Value = note;
-
-            return db.setData(query, parameter) == 1 ? true : false;
+            return db.SetData(query, parameter) == 1;
 
         }
-        public int countIssuedCopiesOfThisBook(int bookID)
+        public int CountIssuedCopiesOfThisBook(int bookID)
         {
             // finds all the books from issuebook that has the given book id with status issued
             string query = "SELECT * FROM `issuebook` where `bookID`=@id and status = 'issued'";
             MySqlParameter[] parameter = new MySqlParameter[1];
             parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[0].Value = bookID;
-
-            return db.getData(query, parameter).Rows.Count;          
+            return db.GetData(query, parameter).Rows.Count;          
         }
-        public Boolean checkBookAvailability(int bookID)
+        public Boolean CheckBookAvailability(int bookID)
         {   
-            int bookQuantity = Convert.ToInt32(book.getBookInfo(bookID)["quantity"].ToString());
-            int issuedCopies = countIssuedCopiesOfThisBook(bookID);
+            int bookQuantity = Convert.ToInt32(book.GetBookInfo(bookID)["quantity"].ToString());
+            int issuedCopies = CountIssuedCopiesOfThisBook(bookID);
             /* checks if the number of books for that book is greater than the total number of books issued
               if so, then a book must be available, else no book is available to issue out*/   
-            return bookQuantity > issuedCopies ? true : false;
+            return bookQuantity > issuedCopies;
         }
         public DataTable IssueBookList(string status)
         {
-            string query = "SELECT * FROM `issuebook`";
-            if (!status.Equals(""))
-            {
-                query = "SELECT * FROM `issuebook` WHERE `status`='"+status+"'";
-            }
+            string query = !status.Equals("") ?
+                "SELECT * FROM `issuebook` WHERE `status`='" + status + "'"
+                :
+                "SELECT * FROM `issuebook`";
+            //string query = "SELECT * FROM `issuebook`";
+            //if (!status.Equals(""))
+            //{
+            //    query = "SELECT * FROM `issuebook` WHERE `status`='"+status+"'";
+            //}
             // if a status was parsed in, selects issuebooks which have the status passed in, then returns the data table
-            DataTable table = new DataTable();
-            return db.getData(query, null);
+            //DataTable table = new DataTable();
+            return db.GetData(query, null);
         }
-        public Boolean returnBook(int bookID, int memberID, string status, DateTime issueDate, DateTime returnDate, string note)
+        public Boolean ReturnBook(int bookID, int memberID, string status, DateTime issueDate, DateTime returnDate, string note)
         {
             // updates an issued book to either "lost" or "returned" depending on what "status" was passed in
             string query = "UPDATE `issuebook` SET `status`=@stat, `returndate`=@returnDa, `note`=@note where `bookid`=@bId AND `memberID`=@mID AND `issueDate`=@issueDa";
@@ -77,9 +79,9 @@ namespace ManagementSystemProject.CLASSES
             parameter[5] = new MySqlParameter("@issueDa", MySqlDbType.Date);
             parameter[5].Value = issueDate;
 
-            return db.setData(query, parameter) == 1 ? true : false;
+            return db.SetData(query, parameter) == 1;
         }
-        public Boolean removeBook(int bookID, int memberID, DateTime issueDate)
+        public Boolean RemoveBook(int bookID, int memberID, DateTime issueDate)
         {
             // deletes issuebook in table where book id, member id and issuedate equal the value passed in 
             string query = "DELETE FROM `issuebook` WHERE `bookID`=@bookid AND `memberID`=@memberid AND `issueDate`=@issueDa";
@@ -91,9 +93,9 @@ namespace ManagementSystemProject.CLASSES
             parameter[2] = new MySqlParameter("@issueDa", MySqlDbType.Date);
             parameter[2].Value = issueDate;
 
-            return db.setData(query, parameter) == 1 ? true : false;
+            return db.SetData(query, parameter) == 1;
         }
-        public Boolean isBookStillIssuedByMember(int memberID, int bookID)
+        public Boolean IsBookStillIssuedByMember(int memberID, int bookID)
         {
             // similar to removeBook, finds if a book issued is still "issued" as status for a given member & book id.
             string query = "SELECT * FROM `issuebook` WHERE `status`=`issued` AND `bookID`=@bookid AND `memberID`=@memberid";
@@ -102,9 +104,10 @@ namespace ManagementSystemProject.CLASSES
             parameter[0].Value = bookID;
             parameter[1] = new MySqlParameter("@memberid", MySqlDbType.Int32);
             parameter[1].Value = memberID;
-            DataTable table = db.getData(query, parameter);
+            //DataTable table = db.GetData(query, parameter);
             // if it finds something, then table rows count will be greater than zero, hence return true
-            return table.Rows.Count > 0 ? true : false;
+            //return table.Rows.Count > 0;
+            return db.GetData(query, parameter).Rows.Count > 0;
         }
     }
 }

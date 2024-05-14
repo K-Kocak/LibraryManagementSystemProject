@@ -28,7 +28,7 @@ namespace ManagementSystemProject.FORMS
             int bookID = (int)numericUpDownBookID.Value;
             if (MessageBox.Show("Do you really want to delete this Book?", "Confirmation Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (books.deleteBook(bookID))
+                if (books.DeleteBook(bookID))
                 {
                     MessageBox.Show("Book has been removed.", "Removed Book", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

@@ -7,7 +7,7 @@ namespace ManagementSystemProject.CLASSES
     {
         THE_DATABASE.MYDB db = new THE_DATABASE.MYDB();
 
-        public bool addBook(string isbn, string title, int authorID, int genreID, 
+        public bool AddBook(string isbn, string title, int authorID, int genreID, 
             int quantity, double price, string publisher, DateTime dateReceived, string about, byte[] cover)
         {
             // takes in several parameters inside the UI and passes them into this function, uses this data to create a new entry in the books database
@@ -36,10 +36,10 @@ namespace ManagementSystemProject.CLASSES
             parameter[9] = new MySqlParameter("@img", MySqlDbType.Blob);
             parameter[9].Value = cover;
             // return true if it was able to successfully insert the new book
-            return db.setData(query, parameter) == 1;
+            return db.SetData(query, parameter) == 1;
         }
 
-        public bool editBook(int id, string isbn, string title, int authorID, int genreID,
+        public bool EditBook(int id, string isbn, string title, int authorID, int genreID,
             int quantity, double price, string publisher, DateTime dateReceived, string about, byte[] cover)
         {
             // similar to add book, finds the book with selected ID and changes all the parameters appropriately as given
@@ -68,41 +68,43 @@ namespace ManagementSystemProject.CLASSES
             parameter[9].Value = cover;
             parameter[10] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[10].Value = id;
-            return db.setData(query, parameter) == 1;
+            return db.SetData(query, parameter) == 1;
         }
 
-        public bool deleteBook(int id)
+        public bool DeleteBook(int id)
         {
             // finds book with given ID, removes from database
             string query = "DELETE FROM `books` WHERE `id`=@id";
             MySqlParameter[] parameter = new MySqlParameter[1];
             parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[0].Value = id;
-            return db.setData(query, parameter) == 1;
+            return db.SetData(query, parameter) == 1;
         }
 
         public DataTable BookList()
         {
             // selects all books in the database, ordered descending by ID
             string query = "SELECT * FROM `books` ORDER BY id DESC";
-            DataTable table = new DataTable();
-            table = db.getData(query, null);
-            return table;
+            //DataTable table = new DataTable();
+            //table = db.GetData(query, null);
+            //return table;
+            return db.GetData(query, null);
         }
 
-        public DataTable authorBooks(int authorID)
+        public DataTable AuthorBooks(int authorID)
         {
             // select all the books where its author ID matches the passed in author ID
             string query = "SELECT * FROM `books` WHERE `authorID`=@authorID";
             MySqlParameter[] parameters = new MySqlParameter[1];
             parameters[0] = new MySqlParameter("@authorID", MySqlDbType.Int32);
             parameters[0].Value = authorID;            
-            DataTable table = new DataTable();
-            table = db.getData(query, parameters);
-            return table;            
+            //DataTable table = new DataTable();
+            //table = db.GetData(query, parameters);
+            //return table;
+            return db.GetData(query, parameters);
         }
 
-        public Boolean isISBNExists(string isbn, int id) 
+        public Boolean IsISBNExists(string isbn, int id) 
         {
             // selects all books where the isbn matches 
             string query = "SELECT * FROM `books` WHERE `isbn`=@isbn AND id <> @id";
@@ -111,13 +113,13 @@ namespace ManagementSystemProject.CLASSES
             parameters[0].Value = isbn;
             parameters[1] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameters[1].Value = id;
-
-            DataTable table = new DataTable();
-            table = db.getData(query, parameters);
-            return table.Rows.Count > 0;
+            //DataTable table = new DataTable();
+            //table = db.GetData(query, parameters);
+            //return table.Rows.Count > 0;
+            return db.GetData(query, parameters).Rows.Count > 0;
         }
 
-        public Boolean isTitleExists(string title, int id)
+        public Boolean IsTitleExists(string title, int id)
         {
             // same as ISBN
             string query = "SELECT * FROM `books` WHERE `title`=@title AND id <> @id";
@@ -126,13 +128,13 @@ namespace ManagementSystemProject.CLASSES
             parameters[0].Value = title;
             parameters[1] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameters[1].Value = id;
-
-            DataTable table = new DataTable();
-            table = db.getData(query, parameters);
-            return table.Rows.Count > 0;
+            //DataTable table = new DataTable();
+            //table = db.GetData(query, parameters);
+            //return table.Rows.Count > 0;
+            return db.GetData(query, parameters).Rows.Count > 0;
         }
 
-        public DataTable searchByIDOrISBN(string idOrISBN, int id, string isbn)
+        public DataTable SearchByIDOrISBN(string idOrISBN, int id, string isbn)
         {
             //this function handles search by ISBN and search by ID button
             string query;
@@ -149,11 +151,12 @@ namespace ManagementSystemProject.CLASSES
                 parameters[0] = new MySqlParameter("@isbn", MySqlDbType.VarChar);
                 parameters[0].Value = isbn;
             }
-            DataTable table = new DataTable();
-            table = db.getData(query, parameters);
-            return table;
+            //DataTable table = new DataTable();
+            //table = db.GetData(query, parameters);
+            //return table;
+            return db.GetData(query, parameters);
         }
-        public DataRow getBookInfo(int bookID)
+        public DataRow GetBookInfo(int bookID)
         {
             string query = "SELECT b.id, `isbn`, `title`, concat(a.firstname, ' ', a.surname) as author, " +
                 "g.name as genre, `quantity`, `price`, `publisher`, `dateReceived`, b.about, `cover` " +
@@ -161,20 +164,21 @@ namespace ManagementSystemProject.CLASSES
             MySqlParameter[] parameters = new MySqlParameter[1];
             parameters[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameters[0].Value = bookID;
-            DataTable table = new DataTable();
-            table = db.getData(query, parameters);
-            return table.Rows[0];
+            //DataTable table = new DataTable();
+            //table = db.GetData(query, parameters);
+            //return table.Rows[0];
+            return db.GetData(query, parameters).Rows[0];
         }
 
 
-        public bool bookQuantityMinusOne(int bookID)
+        public bool BookQuantityMinusOne(int bookID)
         {
             //used in circulation form for when a book is lost, reduces quantity by 1
             string query = "UPDATE `books` SET `quantity`=quantity-1 WHERE `id`=@bID";
             MySqlParameter[] parameter = new MySqlParameter[1];
             parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[0].Value = bookID;
-            return db.setData(query, parameter) == 1;
+            return db.SetData(query, parameter) == 1;
         }
 
     }

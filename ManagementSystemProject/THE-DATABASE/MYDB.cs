@@ -11,7 +11,7 @@ namespace ManagementSystemProject.THE_DATABASE
     internal class MYDB
     {
         private MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=csharp_msys_db");
-        public void openConnection()
+        public void OpenConnection()
         {
             if(connection.State == System.Data.ConnectionState.Closed)
             {
@@ -19,7 +19,7 @@ namespace ManagementSystemProject.THE_DATABASE
             }
         }
 
-        public void closeConnection()
+        public void CloseConnection()
         {
             if (connection.State == System.Data.ConnectionState.Open)
             {
@@ -27,14 +27,14 @@ namespace ManagementSystemProject.THE_DATABASE
             }
         }
 
-        public MySqlConnection getConnection()
+        public MySqlConnection GetConnection()
         {
             return connection;
         }
 
-        public DataTable getData(string query, MySqlParameter[] parameters)
+        public DataTable GetData(string query, MySqlParameter[] parameters)
         {
-            MySqlCommand command = new MySqlCommand(query, getConnection());
+            MySqlCommand command = new MySqlCommand(query, GetConnection());
             if(parameters != null)
             {
                 command.Parameters.AddRange(parameters);
@@ -47,19 +47,19 @@ namespace ManagementSystemProject.THE_DATABASE
             return table;
         }
 
-        public int setData(string query, MySqlParameter[] parameters)
+        public int SetData(string query, MySqlParameter[] parameters)
         {
-            MySqlCommand command = new MySqlCommand(query, getConnection());
+            MySqlCommand command = new MySqlCommand(query, GetConnection());
             if (parameters != null)
             {
                 command.Parameters.AddRange(parameters);
             }
 
-            openConnection();
+            OpenConnection();
 
             int commandState = command.ExecuteNonQuery();
 
-            closeConnection();
+            CloseConnection();
 
             return commandState;
         }

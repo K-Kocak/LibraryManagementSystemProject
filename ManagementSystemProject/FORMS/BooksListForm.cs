@@ -35,7 +35,7 @@ namespace ManagementSystemProject.FORMS
             labelAuthor.Text = "Books by: " + fullname; 
             // Finds all the books by this particular author ID
             CLASSES.BOOKS book = new CLASSES.BOOKS();
-            DataTable bookList = book.authorBooks(authorID);
+            DataTable bookList = book.AuthorBooks(authorID);
             ListViewItem[] items = new ListViewItem[bookList.Rows.Count];
             String[] titles = new string[bookList.Rows.Count];
             for(int i = 0; i < bookList.Rows.Count; i++)

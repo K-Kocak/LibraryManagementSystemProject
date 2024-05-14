@@ -86,7 +86,7 @@ namespace ManagementSystemProject.FORMS
             }
             else
             {
-                if (member.addMember(firstname, surname, gender, phone, email, memberPicture))
+                if (member.AddMember(firstname, surname, gender, phone, email, memberPicture))
                 {
                     MessageBox.Show("New Member has been added.", "New Member", MessageBoxButtons.OK, MessageBoxIcon.Information);
                  
@@ -142,7 +142,7 @@ namespace ManagementSystemProject.FORMS
                     else
                     {
                         id = Convert.ToInt32(idTextbox.Text);
-                        if (member.editMember(id, firstname, surname, gender, phone, email, memberPicture))
+                        if (member.EditMember(id, firstname, surname, gender, phone, email, memberPicture))
                         {
                             MessageBox.Show("Member has been changed.", "Member Changed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             
@@ -174,7 +174,7 @@ namespace ManagementSystemProject.FORMS
                 id = Convert.ToInt32(idTextbox.Text);
                 if (MessageBox.Show("Do you really want to delete this Member?", "Confirmation Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (member.removeMember(id))
+                    if (member.RemoveMember(id))
                     {
                         MessageBox.Show("Member has been deleted.", "Member removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         buttonClearFields.PerformClick();

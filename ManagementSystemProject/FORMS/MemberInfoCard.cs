@@ -33,7 +33,7 @@ namespace ManagementSystemProject.FORMS
             try
             {
                 // loads the card for a particular member, goes into getMemberByID to find this user, once found, uses this data to fill in the fields
-                DataRow data = member.getMemberByID(memberID);
+                DataRow data = member.GetMemberByID(memberID);
                 labelID.Text = data["id"].ToString();
                 labelFullname.Text = data["firstname"].ToString() + " " + data["surname"].ToString();
                 labelGender.Text = data["gender"].ToString();

@@ -43,13 +43,13 @@ namespace ManagementSystemProject.FORMS
 
             if(verify())
             {
-                if (users.isUsernameExist(username, 00))
+                if (users.IsUsernameExist(username, 00))
                 {
                     MessageBox.Show("This username already exists.", "Duplicate username", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    if (users.addUser(fname, sname, username, password, userType))
+                    if (users.AddUser(fname, sname, username, password, userType))
                     {
                         MessageBox.Show("User Added Succesfully.", "User Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dataGridViewUsers.DataSource = users.UsersList();
@@ -72,12 +72,8 @@ namespace ManagementSystemProject.FORMS
             string fname = labelFirstname.Text;
             string sname = labelSurname.Text;
             string username = labelUsername.Text;
-            string password = labelPassword.Text;            
-            string userType = "user";
-            if (checkBoxAdmin.Checked)
-            {
-                userType = "admin";
-            }
+            string password = labelPassword.Text;
+            string userType = checkBoxAdmin.Checked ? "admin" : "user";
 
             // checking if the fields arent empty and password equals the re-entered password
             if (verify())
@@ -86,14 +82,14 @@ namespace ManagementSystemProject.FORMS
                 {
                     id = Convert.ToInt32(labelID.Text);
                     //returns a boolean if it finds > 0 entries of a given username + id. (true if > 0, false otherwise)
-                    if (users.isUsernameExist(username, id))
+                    if (users.IsUsernameExist(username, id))
                     {
                         MessageBox.Show("This username already exists.", "Duplicate username", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
                         //it will try to edit the user, if succesful then returns true
-                        if (users.editUser(id, fname, sname, username, password, userType))
+                        if (users.EditUser(id, fname, sname, username, password, userType))
                         {
                             MessageBox.Show("User Data Edited Succesfully.", "User Edited", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             dataGridViewUsers.DataSource = users.UsersList();
@@ -127,7 +123,7 @@ namespace ManagementSystemProject.FORMS
                 if (MessageBox.Show("Do you really want to delete this User?", "Confirmation Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // returns true if it was able to delete the user
-                    if (users.removeUser(id))
+                    if (users.RemoveUser(id))
                     {
                         // resets text of input fields once a user has been removed
                         MessageBox.Show("User has been removed.", "Removed User", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -46,7 +46,7 @@ namespace ManagementSystemProject.FORMS
             }
             else
             {
-                if(genre.addGenre(name))
+                if(genre.AddGenre(name))
                 {
                     MessageBox.Show("New Genre has been added.", "New Genre", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridViewGenres.DataSource = genre.GenresList();
@@ -71,7 +71,7 @@ namespace ManagementSystemProject.FORMS
                 }
                 else
                 {
-                    if (genre.editGenre(id, name))
+                    if (genre.EditGenre(id, name))
                     {
                         MessageBox.Show("Genre name has been updated.", "Updated Genre", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dataGridViewGenres.DataSource = genre.GenresList();
@@ -96,7 +96,7 @@ namespace ManagementSystemProject.FORMS
                 int id = Convert.ToInt32(idTextbox.Text);
                 if (MessageBox.Show("Do you really want to delete this Author?", "Confirmation Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (genre.removeGenre(id))
+                    if (genre.RemoveGenre(id))
                     {
                         MessageBox.Show("Genre has been removed.", "Removed Genre", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         idTextbox.Text = "";

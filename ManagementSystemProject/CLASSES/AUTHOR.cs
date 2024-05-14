@@ -6,7 +6,7 @@ namespace ManagementSystemProject.CLASSES
     internal class AUTHOR
     {
         THE_DATABASE.MYDB db = new THE_DATABASE.MYDB();
-        public bool addAuthor(string fname, string sname, string edu, string about)
+        public bool AddAuthor(string fname, string sname, string edu, string about)
         {
             //Adds author to database of authors, with the authors first and last name, their education and some information about the author
             string query = "INSERT INTO `authors`(`firstname`, `surname`, `education`, `about`) VALUES (@fn, @ln, @edu, @abo)";
@@ -20,10 +20,10 @@ namespace ManagementSystemProject.CLASSES
             parameter[3] = new MySqlParameter("@abo", MySqlDbType.VarChar);
             parameter[3].Value = about;
             // If succesful, returns true to indicate to the user that the author was added succesfully 
-            return db.setData(query, parameter) == 1;
+            return db.SetData(query, parameter) == 1;
         }
 
-        public bool editAuthor(int id, string fname, string sname, string edu, string about)
+        public bool EditAuthor(int id, string fname, string sname, string edu, string about)
         {
             // Similar to add, finds the author with the matching id then sets first and last name etc. to the parameters that were passed into this function
             string query = "UPDATE `authors` SET `firstname`=@fn, `surname`=@ln, `education`=@edu, `about`=@abo WHERE `id`=@id";
@@ -39,10 +39,10 @@ namespace ManagementSystemProject.CLASSES
             parameter[4] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[4].Value = id;
             // user feedback
-            return db.setData(query, parameter) == 1;
+            return db.SetData(query, parameter) == 1;
         }
 
-        public bool removeAuthor(int id)
+        public bool RemoveAuthor(int id)
         {
             //Finds the given author id in the databse and deletes it
             string query = "DELETE FROM `authors` WHERE `id`=@id";
@@ -50,20 +50,22 @@ namespace ManagementSystemProject.CLASSES
             parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameter[0].Value = id;
             //user feedback
-            return db.setData(query, parameter) == 1;
+            return db.SetData(query, parameter) == 1;
         }
 
         public DataTable AuthorList(Boolean displayFullName)
         {
             // This gets the list of authors in the database with their first and last name concatenated together
-            string query = "SELECT * FROM `authors`";
-            if(displayFullName)
-            {
-                query = "SELECT `id`, Concat(`firstname`,' ', `surname`) as fullname, `education`, `about` FROM `authors`";
-            }
-            DataTable table = new DataTable();
-            table = db.getData(query, null);
-            return table;
+            //string query = "SELECT * FROM `authors`";
+            //if(displayFullName)
+            //{
+            //    query = "SELECT `id`, Concat(`firstname`,' ', `surname`) as fullname, `education`, `about` FROM `authors`";
+            //}
+            string query = displayFullName ? "SELECT `id`, Concat(`firstname`,' ', `surname`) as fullname, `education`, `about` FROM `authors`" : "SELECT * FROM `authors`";
+            //DataTable table = new DataTable();
+            //table = db.GetData(query, null);
+            //return table;
+            return db.GetData(query, null);
         }
 
         public DataTable getAuthorByID(int id)
@@ -73,9 +75,10 @@ namespace ManagementSystemProject.CLASSES
             MySqlParameter[] parameters = new MySqlParameter[1];
             parameters[0] = new MySqlParameter("@id", MySqlDbType.Int32);
             parameters[0].Value = id;
-            DataTable table = new DataTable();
-            table = db.getData(query, parameters);
-            return table;
+            //DataTable table = new DataTable();
+            //table = db.GetData(query, parameters);
+            //return table;
+            return db.GetData(query, parameters);
         }
     }
 }

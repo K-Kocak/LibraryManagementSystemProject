@@ -33,7 +33,7 @@ namespace ManagementSystemProject.FORMS
             try
             {
                 // Gets info on specified book, and fills out text boxes with the data from that book
-                DataRow data = book.getBookInfo(bookID);
+                DataRow data = book.GetBookInfo(bookID);
                 labelISBN.Text = data["isbn"].ToString();
                 labelTitle.Text = data["title"].ToString();
                 labelAuthor.Text = data["author"].ToString();
