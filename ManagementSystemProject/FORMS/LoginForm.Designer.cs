@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textboxPassword = new System.Windows.Forms.TextBox();
-            this.pictureLock = new System.Windows.Forms.PictureBox();
             this.textboxUsername = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureLock = new System.Windows.Forms.PictureBox();
             this.pictureUser = new System.Windows.Forms.PictureBox();
             this.closeLoginWindow = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
@@ -58,12 +58,12 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.BackColor = System.Drawing.Color.Yellow;
+            this.buttonLogin.BackColor = System.Drawing.Color.Honeydew;
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(41, 257);
+            this.buttonLogin.Font = new System.Drawing.Font("Mongolian Baiti", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.Location = new System.Drawing.Point(88, 254);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(353, 56);
+            this.buttonLogin.Size = new System.Drawing.Size(270, 56);
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -80,15 +80,6 @@
             this.textboxPassword.Text = "1234";
             this.textboxPassword.UseSystemPasswordChar = true;
             // 
-            // pictureLock
-            // 
-            this.pictureLock.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.pictureLock.Location = new System.Drawing.Point(41, 180);
-            this.pictureLock.Name = "pictureLock";
-            this.pictureLock.Size = new System.Drawing.Size(50, 50);
-            this.pictureLock.TabIndex = 4;
-            this.pictureLock.TabStop = false;
-            // 
             // textboxUsername
             // 
             this.textboxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,41 +90,58 @@
             this.textboxUsername.TabIndex = 3;
             this.textboxUsername.Text = "usertest";
             // 
-            // pictureUser
-            // 
-            this.pictureUser.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.pictureUser.Location = new System.Drawing.Point(41, 114);
-            this.pictureUser.Name = "pictureUser";
-            this.pictureUser.Size = new System.Drawing.Size(50, 50);
-            this.pictureUser.TabIndex = 2;
-            this.pictureUser.TabStop = false;
-            // 
-            // closeLoginWindow
-            // 
-            this.closeLoginWindow.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.closeLoginWindow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeLoginWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeLoginWindow.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.closeLoginWindow.Location = new System.Drawing.Point(396, 10);
-            this.closeLoginWindow.Name = "closeLoginWindow";
-            this.closeLoginWindow.Size = new System.Drawing.Size(26, 23);
-            this.closeLoginWindow.TabIndex = 1;
-            this.closeLoginWindow.Text = "X";
-            this.closeLoginWindow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.closeLoginWindow.Click += new System.EventHandler(this.closeLoginWindow_Click);
-            this.closeLoginWindow.MouseEnter += new System.EventHandler(this.closeLoginWindow_MouseEnter);
-            this.closeLoginWindow.MouseLeave += new System.EventHandler(this.closeLoginWindow_MouseLeave);
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(434, 83);
             this.label1.TabIndex = 0;
             this.label1.Text = "User Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureLock
+            // 
+            this.pictureLock.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.pictureLock.Image = global::ManagementSystemProject.Properties.Resources.lockimage;
+            this.pictureLock.Location = new System.Drawing.Point(41, 180);
+            this.pictureLock.Name = "pictureLock";
+            this.pictureLock.Size = new System.Drawing.Size(50, 50);
+            this.pictureLock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureLock.TabIndex = 4;
+            this.pictureLock.TabStop = false;
+            // 
+            // pictureUser
+            // 
+            this.pictureUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(96)))), ((int)(((byte)(128)))));
+            this.pictureUser.Image = global::ManagementSystemProject.Properties.Resources.userimage;
+            this.pictureUser.Location = new System.Drawing.Point(41, 114);
+            this.pictureUser.Name = "pictureUser";
+            this.pictureUser.Size = new System.Drawing.Size(50, 50);
+            this.pictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureUser.TabIndex = 2;
+            this.pictureUser.TabStop = false;
+            // 
+            // closeLoginWindow
+            // 
+            this.closeLoginWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeLoginWindow.BackColor = System.Drawing.Color.Crimson;
+            this.closeLoginWindow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.closeLoginWindow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeLoginWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeLoginWindow.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.closeLoginWindow.Location = new System.Drawing.Point(395, 10);
+            this.closeLoginWindow.Margin = new System.Windows.Forms.Padding(0);
+            this.closeLoginWindow.Name = "closeLoginWindow";
+            this.closeLoginWindow.Size = new System.Drawing.Size(30, 31);
+            this.closeLoginWindow.TabIndex = 1;
+            this.closeLoginWindow.Text = "X";
+            this.closeLoginWindow.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.closeLoginWindow.UseCompatibleTextRendering = true;
+            this.closeLoginWindow.Click += new System.EventHandler(this.closeLoginWindow_Click);
+            this.closeLoginWindow.MouseEnter += new System.EventHandler(this.closeLoginWindow_MouseEnter);
+            this.closeLoginWindow.MouseLeave += new System.EventHandler(this.closeLoginWindow_MouseLeave);
             // 
             // LoginForm
             // 

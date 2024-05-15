@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.memberButton = new System.Windows.Forms.Button();
             this.userButton = new System.Windows.Forms.Button();
             this.circulationButton = new System.Windows.Forms.Button();
             this.genreButton = new System.Windows.Forms.Button();
             this.authorButton = new System.Windows.Forms.Button();
             this.bookButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -59,8 +57,9 @@
             this.bookCountDash = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureCloseButton = new System.Windows.Forms.Button();
+            this.memberButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelBook4.SuspendLayout();
@@ -70,6 +69,7 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -81,34 +81,14 @@
             this.panelMenu.Controls.Add(this.genreButton);
             this.panelMenu.Controls.Add(this.authorButton);
             this.panelMenu.Controls.Add(this.bookButton);
+            this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Controls.Add(this.pictureBox1);
-            this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(305, 541);
             this.panelMenu.TabIndex = 0;
-            // 
-            // memberButton
-            // 
-            this.memberButton.BackColor = System.Drawing.Color.Transparent;
-            this.memberButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.memberButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.memberButton.FlatAppearance.BorderSize = 0;
-            this.memberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.memberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memberButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.memberButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.memberButton.Location = new System.Drawing.Point(27, 331);
-            this.memberButton.Name = "memberButton";
-            this.memberButton.Size = new System.Drawing.Size(275, 62);
-            this.memberButton.TabIndex = 7;
-            this.memberButton.Text = "Members";
-            this.memberButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.memberButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.memberButton.UseVisualStyleBackColor = false;
-            this.memberButton.Click += new System.EventHandler(this.memberButton_Click);
             // 
             // userButton
             // 
@@ -205,34 +185,29 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(0, 97);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(305, 10);
             this.panel2.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 67);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(86, 33);
+            this.label1.Location = new System.Drawing.Point(86, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 29);
+            this.label1.Size = new System.Drawing.Size(210, 94);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Management Sys";
+            this.label1.Text = "Library Management System";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.UseCompatibleTextRendering = true;
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.label9);
@@ -247,6 +222,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Khaki;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.panelBook4);
             this.panel7.Controls.Add(this.panelBook3);
             this.panel7.Controls.Add(this.panelBook2);
@@ -260,7 +236,7 @@
             // 
             this.panelBook4.BackColor = System.Drawing.Color.SlateBlue;
             this.panelBook4.Controls.Add(this.labelPrice4);
-            this.panelBook4.Location = new System.Drawing.Point(595, 3);
+            this.panelBook4.Location = new System.Drawing.Point(599, 3);
             this.panelBook4.Name = "panelBook4";
             this.panelBook4.Size = new System.Drawing.Size(191, 237);
             this.panelBook4.TabIndex = 2;
@@ -281,7 +257,7 @@
             // 
             this.panelBook3.BackColor = System.Drawing.Color.SlateBlue;
             this.panelBook3.Controls.Add(this.labelPrice3);
-            this.panelBook3.Location = new System.Drawing.Point(397, 3);
+            this.panelBook3.Location = new System.Drawing.Point(402, 3);
             this.panelBook3.Name = "panelBook3";
             this.panelBook3.Size = new System.Drawing.Size(191, 237);
             this.panelBook3.TabIndex = 2;
@@ -291,7 +267,7 @@
             this.labelPrice3.AutoSize = true;
             this.labelPrice3.BackColor = System.Drawing.Color.Orange;
             this.labelPrice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrice3.Location = new System.Drawing.Point(98, 3);
+            this.labelPrice3.Location = new System.Drawing.Point(97, 3);
             this.labelPrice3.Name = "labelPrice3";
             this.labelPrice3.Size = new System.Drawing.Size(50, 24);
             this.labelPrice3.TabIndex = 2;
@@ -302,7 +278,7 @@
             // 
             this.panelBook2.BackColor = System.Drawing.Color.SlateBlue;
             this.panelBook2.Controls.Add(this.labelPrice2);
-            this.panelBook2.Location = new System.Drawing.Point(200, 3);
+            this.panelBook2.Location = new System.Drawing.Point(205, 3);
             this.panelBook2.Name = "panelBook2";
             this.panelBook2.Size = new System.Drawing.Size(191, 237);
             this.panelBook2.TabIndex = 2;
@@ -323,7 +299,7 @@
             // 
             this.panelBook1.BackColor = System.Drawing.Color.SlateBlue;
             this.panelBook1.Controls.Add(this.labelPrice1);
-            this.panelBook1.Location = new System.Drawing.Point(3, 3);
+            this.panelBook1.Location = new System.Drawing.Point(8, 3);
             this.panelBook1.Name = "panelBook1";
             this.panelBook1.Size = new System.Drawing.Size(191, 237);
             this.panelBook1.TabIndex = 1;
@@ -343,6 +319,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.memberCountDash);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Location = new System.Drawing.Point(557, 65);
@@ -365,18 +342,19 @@
             // 
             this.label4.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(248, 42);
+            this.label4.Size = new System.Drawing.Size(246, 42);
             this.label4.TabIndex = 2;
             this.label4.Text = "Members";
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label9.Location = new System.Drawing.Point(9, 245);
             this.label9.Name = "label9";
@@ -387,6 +365,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.YellowGreen;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.authorCountDash);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(284, 65);
@@ -409,17 +388,18 @@
             // 
             this.label3.BackColor = System.Drawing.Color.OliveDrab;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(248, 42);
+            this.label3.Size = new System.Drawing.Size(246, 42);
             this.label3.TabIndex = 1;
             this.label3.Text = "Authors";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.IndianRed;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.bookCountDash);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(9, 65);
@@ -442,11 +422,11 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Brown;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 42);
+            this.label2.Size = new System.Drawing.Size(246, 42);
             this.label2.TabIndex = 0;
             this.label2.Text = "Books";
             // 
@@ -467,6 +447,38 @@
             this.pictureCloseButton.UseVisualStyleBackColor = false;
             this.pictureCloseButton.Click += new System.EventHandler(this.pictureCloseButton_Click);
             // 
+            // memberButton
+            // 
+            this.memberButton.BackColor = System.Drawing.Color.Transparent;
+            this.memberButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.memberButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.memberButton.FlatAppearance.BorderSize = 0;
+            this.memberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.memberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memberButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.memberButton.Image = global::ManagementSystemProject.Properties.Resources.membersicon;
+            this.memberButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.memberButton.Location = new System.Drawing.Point(27, 331);
+            this.memberButton.Name = "memberButton";
+            this.memberButton.Size = new System.Drawing.Size(275, 62);
+            this.memberButton.TabIndex = 7;
+            this.memberButton.Text = "Members";
+            this.memberButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.memberButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.memberButton.UseVisualStyleBackColor = false;
+            this.memberButton.Click += new System.EventHandler(this.memberButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox1.Image = global::ManagementSystemProject.Properties.Resources.dashboardsystemimage;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,8 +492,6 @@
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.Shown += new System.EventHandler(this.DashboardForm_Shown);
             this.panelMenu.ResumeLayout(false);
-            this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panelBook4.ResumeLayout(false);
@@ -495,6 +505,7 @@
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

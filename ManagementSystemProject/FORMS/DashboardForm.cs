@@ -22,7 +22,8 @@ namespace ManagementSystemProject.FORMS
             authorButton.Image = Image.FromFile("../../IMAGES/penimage.png");
             genreButton.Image = Image.FromFile("../../IMAGES/labelimage.png");
             circulationButton.Image = Image.FromFile("../../IMAGES/circulationimage.png");
-            userButton.Image = Image.FromFile("../../IMAGES/userimage2.png");    
+            userButton.Image = Image.FromFile("../../IMAGES/userimage2.png");
+            pictureBox1.BringToFront();
         }            
         private void pictureCloseButton_Click(object sender, EventArgs e)
         {

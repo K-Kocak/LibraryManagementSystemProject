@@ -184,6 +184,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,11 +204,14 @@
     <Content Include="IMAGES\addbutton.png" />
     <Content Include="IMAGES\bookimage.png" />
     <Content Include="IMAGES\circulationimage.png" />
+    <None Include="IMAGES\closebuttonimage.png" />
     <Content Include="IMAGES\closebuttonimage2.png" />
+    <None Include="IMAGES\dashboardsystemimage.png" />
     <Content Include="IMAGES\deletebutton.png" />
     <Content Include="IMAGES\editbutton.png" />
     <Content Include="IMAGES\labelimage.png" />
     <Content Include="IMAGES\lockimage.png" />
+    <None Include="IMAGES\membersicon.png" />
     <Content Include="IMAGES\penimage.png" />
     <Content Include="IMAGES\randombookcover.png" />
     <Content Include="IMAGES\userimage.png" />
