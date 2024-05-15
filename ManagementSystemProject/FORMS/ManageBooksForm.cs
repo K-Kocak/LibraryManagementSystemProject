@@ -33,6 +33,9 @@ namespace ManagementSystemProject.FORMS
             bookCountLabel.Text = book.BookList().Rows.Count.ToString() + " Books";
             // brings the add book panel to the front
             panelAdd.BringToFront();
+            panelAdd.Visible = true;
+            panelEdit.Visible = false;
+            panelShowBooks.Visible = false;
         }
         private void selectCoverButton_Click(object sender, EventArgs e)
         {
@@ -152,6 +155,9 @@ namespace ManagementSystemProject.FORMS
         {
             // brings the Add panel to the front
             panelAdd.BringToFront();
+            panelAdd.Visible = true;
+            panelEdit.Visible = false;
+            panelShowBooks.Visible = false;
             authorTextbox.Text = "";
             authorIDbox.Text = "ID:";
         }
@@ -160,6 +166,9 @@ namespace ManagementSystemProject.FORMS
             // bring the edit panel to the front
             // loads up the genre list
             panelEdit.BringToFront();
+            panelAdd.Visible = false;
+            panelEdit.Visible = true;
+            panelShowBooks.Visible = false;
             genreEditCombobox.DataSource = genre.GenresList();
             genreEditCombobox.DisplayMember = "name";
             genreEditCombobox.ValueMember = "id";
@@ -281,7 +290,8 @@ namespace ManagementSystemProject.FORMS
             anotherIDEdit.Text = data.Rows[0][3].ToString();
             priceEditTextbox.Text = data.Rows[0][6].ToString();
             publisherEditTextbox.Text = data.Rows[0][7].ToString();
-            aboutRichTextbox.Text = data.Rows[0][9].ToString();
+            // bug fixed, wrong rich text box being edited
+            EditrichTextbox.Text = data.Rows[0][9].ToString();
             numericUpDownQuantityEdit.Value = Convert.ToInt32(data.Rows[0][5].ToString());
             genreEditCombobox.SelectedValue = data.Rows[0][4].ToString();
             editDateTimePicker.Value = (DateTime)data.Rows[0][8];
@@ -294,6 +304,9 @@ namespace ManagementSystemProject.FORMS
         {
             // displays a table of all books in the database
             panelShowBooks.BringToFront();
+            panelAdd.Visible = false;
+            panelEdit.Visible = false;
+            panelShowBooks.Visible = true;
             dataGridViewBookList.RowTemplate.Height = 50;
             dataGridViewBookList.DataSource = book.BookList();
             DataGridViewImageColumn dvgImgCol = new DataGridViewImageColumn();
@@ -316,6 +329,9 @@ namespace ManagementSystemProject.FORMS
         {
             // for editing a specific book, will bring the edit panel to the front
             panelEdit.BringToFront();
+            panelAdd.Visible = false;
+            panelEdit.Visible = true;
+            panelShowBooks.Visible = false;
             genreEditCombobox.DataSource = genre.GenresList();
             genreEditCombobox.DisplayMember = "name";
             genreEditCombobox.ValueMember = "id";

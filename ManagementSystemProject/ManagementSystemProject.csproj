@@ -209,6 +209,7 @@
     <None Include="IMAGES\dashboardsystemimage.png" />
     <Content Include="IMAGES\deletebutton.png" />
     <Content Include="IMAGES\editbutton.png" />
+    <None Include="IMAGES\exporttotextfile.png" />
     <Content Include="IMAGES\labelimage.png" />
     <Content Include="IMAGES\lockimage.png" />
     <None Include="IMAGES\membersicon.png" />

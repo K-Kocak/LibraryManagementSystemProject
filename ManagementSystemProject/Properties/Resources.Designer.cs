@@ -63,6 +63,16 @@ namespace ManagementSystemProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bookimage {
+            get {
+                object obj = ResourceManager.GetObject("bookimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap closebuttonimage {
             get {
                 object obj = ResourceManager.GetObject("closebuttonimage", resourceCulture);
@@ -76,6 +86,26 @@ namespace ManagementSystemProject.Properties {
         internal static System.Drawing.Bitmap dashboardsystemimage {
             get {
                 object obj = ResourceManager.GetObject("dashboardsystemimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deletebutton {
+            get {
+                object obj = ResourceManager.GetObject("deletebutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exporttotextfile {
+            get {
+                object obj = ResourceManager.GetObject("exporttotextfile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

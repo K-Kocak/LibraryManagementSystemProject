@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonExportBooks = new System.Windows.Forms.Button();
-            this.showBookListButton = new System.Windows.Forms.Button();
             this.bookCountLabel = new System.Windows.Forms.Label();
-            this.removeButton1 = new System.Windows.Forms.Button();
             this.editButton1 = new System.Windows.Forms.Button();
             this.addButton1 = new System.Windows.Forms.Button();
             this.closeWindow1 = new System.Windows.Forms.Label();
@@ -59,7 +56,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.editPictureCover = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
-            this.coverEditPictureBox = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.publisherEditTextbox = new System.Windows.Forms.TextBox();
             this.editDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -83,7 +79,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
             this.authorIDbox = new System.Windows.Forms.Label();
             this.addBookButton = new System.Windows.Forms.Button();
@@ -94,7 +89,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.selectCoverButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.coverPicturebox = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.publisherTextbox = new System.Windows.Forms.TextBox();
             this.dateReceivedDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -111,15 +105,24 @@
             this.ISBNTextbox = new System.Windows.Forms.TextBox();
             this.titleTextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.coverEditPictureBox = new System.Windows.Forms.PictureBox();
+            this.coverPicturebox = new System.Windows.Forms.PictureBox();
+            this.buttonExportBooks = new System.Windows.Forms.Button();
+            this.showBookListButton = new System.Windows.Forms.Button();
+            this.removeButton1 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelShowBooks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookList)).BeginInit();
             this.panelEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantityEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coverEditPictureBox)).BeginInit();
             this.panelAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverEditPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPicturebox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,38 +140,6 @@
             this.panel1.Size = new System.Drawing.Size(180, 465);
             this.panel1.TabIndex = 9;
             // 
-            // buttonExportBooks
-            // 
-            this.buttonExportBooks.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonExportBooks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonExportBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonExportBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExportBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExportBooks.Location = new System.Drawing.Point(7, 298);
-            this.buttonExportBooks.Name = "buttonExportBooks";
-            this.buttonExportBooks.Size = new System.Drawing.Size(161, 58);
-            this.buttonExportBooks.TabIndex = 55;
-            this.buttonExportBooks.Text = "Export Books to text file";
-            this.buttonExportBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonExportBooks.UseVisualStyleBackColor = false;
-            this.buttonExportBooks.Click += new System.EventHandler(this.buttonExportBooks_Click);
-            // 
-            // showBookListButton
-            // 
-            this.showBookListButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.showBookListButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.showBookListButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showBookListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showBookListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showBookListButton.Location = new System.Drawing.Point(7, 157);
-            this.showBookListButton.Name = "showBookListButton";
-            this.showBookListButton.Size = new System.Drawing.Size(161, 51);
-            this.showBookListButton.TabIndex = 53;
-            this.showBookListButton.Text = "Show Books";
-            this.showBookListButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.showBookListButton.UseVisualStyleBackColor = false;
-            this.showBookListButton.Click += new System.EventHandler(this.showBookListButton_Click);
-            // 
             // bookCountLabel
             // 
             this.bookCountLabel.AutoSize = true;
@@ -180,30 +151,14 @@
             this.bookCountLabel.TabIndex = 52;
             this.bookCountLabel.Text = "99999 Books";
             // 
-            // removeButton1
-            // 
-            this.removeButton1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.removeButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.removeButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.removeButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.removeButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeButton1.Location = new System.Drawing.Point(7, 226);
-            this.removeButton1.Name = "removeButton1";
-            this.removeButton1.Size = new System.Drawing.Size(161, 51);
-            this.removeButton1.TabIndex = 8;
-            this.removeButton1.Text = "Remove";
-            this.removeButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.removeButton1.UseVisualStyleBackColor = false;
-            this.removeButton1.Click += new System.EventHandler(this.removeButton1_Click);
-            // 
             // editButton1
             // 
-            this.editButton1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.editButton1.BackColor = System.Drawing.Color.Lavender;
             this.editButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.editButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton1.Location = new System.Drawing.Point(7, 91);
+            this.editButton1.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton1.Location = new System.Drawing.Point(7, 102);
             this.editButton1.Name = "editButton1";
             this.editButton1.Size = new System.Drawing.Size(161, 51);
             this.editButton1.TabIndex = 7;
@@ -214,12 +169,12 @@
             // 
             // addButton1
             // 
-            this.addButton1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.addButton1.BackColor = System.Drawing.Color.YellowGreen;
             this.addButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.addButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton1.Location = new System.Drawing.Point(7, 23);
+            this.addButton1.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton1.Location = new System.Drawing.Point(7, 31);
             this.addButton1.Name = "addButton1";
             this.addButton1.Size = new System.Drawing.Size(161, 51);
             this.addButton1.TabIndex = 6;
@@ -245,20 +200,20 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(179, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(977, 93);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Books";
+            this.label1.Text = "Manage Books";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.panelAdd);
             this.panel2.Controls.Add(this.panelShowBooks);
             this.panel2.Controls.Add(this.panelEdit);
-            this.panel2.Controls.Add(this.panelAdd);
             this.panel2.Location = new System.Drawing.Point(180, 90);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(986, 374);
@@ -267,37 +222,39 @@
             // panelShowBooks
             // 
             this.panelShowBooks.BackColor = System.Drawing.Color.Moccasin;
+            this.panelShowBooks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelShowBooks.Controls.Add(this.buttonEditBookData);
             this.panelShowBooks.Controls.Add(this.buttonRemoveBookData);
             this.panelShowBooks.Controls.Add(this.dataGridViewBookList);
             this.panelShowBooks.Location = new System.Drawing.Point(0, 0);
             this.panelShowBooks.Name = "panelShowBooks";
-            this.panelShowBooks.Size = new System.Drawing.Size(985, 373);
+            this.panelShowBooks.Size = new System.Drawing.Size(983, 373);
             this.panelShowBooks.TabIndex = 54;
             // 
             // buttonEditBookData
             // 
-            this.buttonEditBookData.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonEditBookData.BackColor = System.Drawing.Color.Lavender;
             this.buttonEditBookData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEditBookData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditBookData.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditBookData.Location = new System.Drawing.Point(13, 310);
             this.buttonEditBookData.Name = "buttonEditBookData";
             this.buttonEditBookData.Size = new System.Drawing.Size(465, 43);
             this.buttonEditBookData.TabIndex = 56;
-            this.buttonEditBookData.Text = "Edit this book";
+            this.buttonEditBookData.Text = "Edit Selected Book";
             this.buttonEditBookData.UseVisualStyleBackColor = false;
             this.buttonEditBookData.Click += new System.EventHandler(this.buttonEditBookData_Click);
             // 
             // buttonRemoveBookData
             // 
-            this.buttonRemoveBookData.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonRemoveBookData.BackColor = System.Drawing.Color.LightCoral;
             this.buttonRemoveBookData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRemoveBookData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemoveBookData.Location = new System.Drawing.Point(506, 312);
+            this.buttonRemoveBookData.FlatAppearance.BorderColor = System.Drawing.Color.LightCoral;
+            this.buttonRemoveBookData.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRemoveBookData.Location = new System.Drawing.Point(506, 310);
             this.buttonRemoveBookData.Name = "buttonRemoveBookData";
-            this.buttonRemoveBookData.Size = new System.Drawing.Size(467, 41);
+            this.buttonRemoveBookData.Size = new System.Drawing.Size(465, 43);
             this.buttonRemoveBookData.TabIndex = 55;
-            this.buttonRemoveBookData.Text = "Remove this book";
+            this.buttonRemoveBookData.Text = "Remove Selected Book";
             this.buttonRemoveBookData.UseVisualStyleBackColor = false;
             this.buttonRemoveBookData.Click += new System.EventHandler(this.buttonRemoveBookData_Click);
             // 
@@ -306,14 +263,18 @@
             this.dataGridViewBookList.AllowUserToAddRows = false;
             this.dataGridViewBookList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBookList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBookList.Location = new System.Drawing.Point(9, 13);
+            this.dataGridViewBookList.Location = new System.Drawing.Point(9, 5);
             this.dataGridViewBookList.Name = "dataGridViewBookList";
-            this.dataGridViewBookList.Size = new System.Drawing.Size(964, 281);
+            this.dataGridViewBookList.Size = new System.Drawing.Size(964, 289);
             this.dataGridViewBookList.TabIndex = 0;
             // 
             // panelEdit
             // 
             this.panelEdit.BackColor = System.Drawing.Color.Orange;
+            this.panelEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelEdit.Controls.Add(this.label37);
+            this.panelEdit.Controls.Add(this.label36);
+            this.panelEdit.Controls.Add(this.label24);
             this.panelEdit.Controls.Add(this.searchIDButton);
             this.panelEdit.Controls.Add(this.label15);
             this.panelEdit.Controls.Add(this.label19);
@@ -348,15 +309,15 @@
             this.panelEdit.Controls.Add(this.TitleEditTextbox);
             this.panelEdit.Controls.Add(this.label35);
             this.panelEdit.Controls.Add(this.searchISBNButton);
-            this.panelEdit.Location = new System.Drawing.Point(6, 5);
+            this.panelEdit.Location = new System.Drawing.Point(5, 5);
             this.panelEdit.Name = "panelEdit";
-            this.panelEdit.Size = new System.Drawing.Size(970, 357);
+            this.panelEdit.Size = new System.Drawing.Size(970, 366);
             this.panelEdit.TabIndex = 52;
             // 
             // searchIDButton
             // 
             this.searchIDButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.searchIDButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchIDButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchIDButton.Location = new System.Drawing.Point(200, 17);
             this.searchIDButton.Name = "searchIDButton";
             this.searchIDButton.Size = new System.Drawing.Size(137, 33);
@@ -367,23 +328,22 @@
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.IndianRed;
-            this.label15.Location = new System.Drawing.Point(670, 64);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(341, 24);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(21, 26);
+            this.label15.Size = new System.Drawing.Size(20, 26);
             this.label15.TabIndex = 51;
             this.label15.Text = "*";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.IndianRed;
-            this.label19.Location = new System.Drawing.Point(307, 291);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(5, 316);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(21, 26);
             this.label19.TabIndex = 50;
@@ -391,13 +351,12 @@
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.IndianRed;
-            this.label20.Location = new System.Drawing.Point(195, 162);
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(2, 175);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(21, 26);
+            this.label20.Size = new System.Drawing.Size(16, 26);
             this.label20.TabIndex = 49;
             this.label20.Text = "*";
             // 
@@ -440,12 +399,12 @@
             // anotherIDEdit
             // 
             this.anotherIDEdit.AutoSize = true;
-            this.anotherIDEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.anotherIDEdit.Location = new System.Drawing.Point(231, 163);
+            this.anotherIDEdit.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.anotherIDEdit.Location = new System.Drawing.Point(229, 175);
             this.anotherIDEdit.Name = "anotherIDEdit";
-            this.anotherIDEdit.Size = new System.Drawing.Size(32, 24);
+            this.anotherIDEdit.Size = new System.Drawing.Size(39, 20);
             this.anotherIDEdit.TabIndex = 43;
-            this.anotherIDEdit.Text = "ID:";
+            this.anotherIDEdit.Text = "ID :";
             // 
             // editBookButton
             // 
@@ -453,7 +412,7 @@
             this.editBookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.editBookButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBookButton.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBookButton.Location = new System.Drawing.Point(427, 307);
             this.editBookButton.Name = "editBookButton";
             this.editBookButton.Size = new System.Drawing.Size(273, 34);
@@ -469,12 +428,12 @@
             this.selectAuthorEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.selectAuthorEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectAuthorEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selectAuthorEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectAuthorEdit.Location = new System.Drawing.Point(269, 148);
+            this.selectAuthorEdit.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectAuthorEdit.Location = new System.Drawing.Point(269, 155);
             this.selectAuthorEdit.Name = "selectAuthorEdit";
-            this.selectAuthorEdit.Size = new System.Drawing.Size(68, 48);
+            this.selectAuthorEdit.Size = new System.Drawing.Size(68, 66);
             this.selectAuthorEdit.TabIndex = 9;
-            this.selectAuthorEdit.Text = "Select Author";
+            this.selectAuthorEdit.Text = "Select An Author";
             this.selectAuthorEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.selectAuthorEdit.UseVisualStyleBackColor = false;
             this.selectAuthorEdit.Click += new System.EventHandler(this.selectAuthorEdit_Click);
@@ -482,7 +441,7 @@
             // authorEditTextbox
             // 
             this.authorEditTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authorEditTextbox.Location = new System.Drawing.Point(92, 159);
+            this.authorEditTextbox.Location = new System.Drawing.Point(92, 170);
             this.authorEditTextbox.Multiline = true;
             this.authorEditTextbox.Name = "authorEditTextbox";
             this.authorEditTextbox.Size = new System.Drawing.Size(133, 31);
@@ -491,7 +450,7 @@
             // numericUpDownQuantityEdit
             // 
             this.numericUpDownQuantityEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownQuantityEdit.Location = new System.Drawing.Point(92, 248);
+            this.numericUpDownQuantityEdit.Location = new System.Drawing.Point(92, 273);
             this.numericUpDownQuantityEdit.Name = "numericUpDownQuantityEdit";
             this.numericUpDownQuantityEdit.Size = new System.Drawing.Size(101, 32);
             this.numericUpDownQuantityEdit.TabIndex = 40;
@@ -500,7 +459,7 @@
             // 
             this.genreEditCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genreEditCombobox.FormattingEnabled = true;
-            this.genreEditCombobox.Location = new System.Drawing.Point(92, 202);
+            this.genreEditCombobox.Location = new System.Drawing.Point(92, 234);
             this.genreEditCombobox.Name = "genreEditCombobox";
             this.genreEditCombobox.Size = new System.Drawing.Size(245, 33);
             this.genreEditCombobox.TabIndex = 39;
@@ -508,12 +467,12 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(3, 206);
+            this.label25.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(24, 238);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(68, 24);
+            this.label25.Size = new System.Drawing.Size(65, 20);
             this.label25.TabIndex = 38;
-            this.label25.Text = "Genre:";
+            this.label25.Text = "Genre :";
             // 
             // editPictureCover
             // 
@@ -521,10 +480,10 @@
             this.editPictureCover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.editPictureCover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editPictureCover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editPictureCover.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editPictureCover.Location = new System.Drawing.Point(735, 292);
+            this.editPictureCover.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editPictureCover.Location = new System.Drawing.Point(735, 307);
             this.editPictureCover.Name = "editPictureCover";
-            this.editPictureCover.Size = new System.Drawing.Size(214, 41);
+            this.editPictureCover.Size = new System.Drawing.Size(214, 34);
             this.editPictureCover.TabIndex = 9;
             this.editPictureCover.Text = "Select Cover";
             this.editPictureCover.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -534,37 +493,27 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(801, 8);
+            this.label26.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(788, 22);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 24);
+            this.label26.Size = new System.Drawing.Size(104, 20);
             this.label26.TabIndex = 35;
-            this.label26.Text = "Cover:";
-            // 
-            // coverEditPictureBox
-            // 
-            this.coverEditPictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.coverEditPictureBox.Location = new System.Drawing.Point(735, 35);
-            this.coverEditPictureBox.Name = "coverEditPictureBox";
-            this.coverEditPictureBox.Size = new System.Drawing.Size(214, 250);
-            this.coverEditPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.coverEditPictureBox.TabIndex = 34;
-            this.coverEditPictureBox.TabStop = false;
+            this.label26.Text = "Book Cover";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(356, 65);
+            this.label27.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(357, 25);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(94, 24);
+            this.label27.Size = new System.Drawing.Size(91, 20);
             this.label27.TabIndex = 32;
-            this.label27.Text = "Publisher:";
+            this.label27.Text = "Publisher :";
             // 
             // publisherEditTextbox
             // 
             this.publisherEditTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publisherEditTextbox.Location = new System.Drawing.Point(456, 61);
+            this.publisherEditTextbox.Location = new System.Drawing.Point(456, 21);
             this.publisherEditTextbox.Multiline = true;
             this.publisherEditTextbox.Name = "publisherEditTextbox";
             this.publisherEditTextbox.Size = new System.Drawing.Size(244, 31);
@@ -572,26 +521,27 @@
             // 
             // editDateTimePicker
             // 
+            this.editDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.editDateTimePicker.Location = new System.Drawing.Point(500, 111);
+            this.editDateTimePicker.Location = new System.Drawing.Point(492, 63);
             this.editDateTimePicker.Name = "editDateTimePicker";
-            this.editDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.editDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.editDateTimePicker.TabIndex = 31;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(356, 109);
+            this.label28.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(357, 67);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(138, 24);
+            this.label28.Size = new System.Drawing.Size(129, 20);
             this.label28.TabIndex = 30;
-            this.label28.Text = "Date Received:";
+            this.label28.Text = "Date Received :";
             // 
             // priceEditTextbox
             // 
             this.priceEditTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceEditTextbox.Location = new System.Drawing.Point(92, 288);
+            this.priceEditTextbox.Location = new System.Drawing.Point(92, 311);
             this.priceEditTextbox.Multiline = true;
             this.priceEditTextbox.Name = "priceEditTextbox";
             this.priceEditTextbox.Size = new System.Drawing.Size(245, 31);
@@ -600,60 +550,62 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(3, 292);
+            this.label29.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(31, 315);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(58, 24);
+            this.label29.Size = new System.Drawing.Size(57, 20);
             this.label29.TabIndex = 28;
-            this.label29.Text = "Price:";
+            this.label29.Text = "Price :";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(3, 251);
+            this.label30.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(3, 278);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(83, 24);
+            this.label30.Size = new System.Drawing.Size(86, 20);
             this.label30.TabIndex = 26;
-            this.label30.Text = "Quantity:";
+            this.label30.Text = "Quantity :";
             // 
             // EditrichTextbox
             // 
-            this.EditrichTextbox.Location = new System.Drawing.Point(427, 148);
+            this.EditrichTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EditrichTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditrichTextbox.Location = new System.Drawing.Point(427, 106);
             this.EditrichTextbox.Name = "EditrichTextbox";
-            this.EditrichTextbox.Size = new System.Drawing.Size(273, 153);
+            this.EditrichTextbox.Size = new System.Drawing.Size(273, 195);
             this.EditrichTextbox.TabIndex = 25;
             this.EditrichTextbox.Text = "";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(3, 65);
+            this.label31.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(29, 65);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(57, 24);
+            this.label31.Size = new System.Drawing.Size(63, 20);
             this.label31.TabIndex = 17;
-            this.label31.Text = "ISBN:";
+            this.label31.Text = "ISBN :";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(356, 148);
+            this.label32.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(357, 109);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(65, 24);
+            this.label32.Size = new System.Drawing.Size(68, 20);
             this.label32.TabIndex = 24;
-            this.label32.Text = "About:";
+            this.label32.Text = "About :";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(3, 21);
+            this.label33.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(53, 21);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(32, 24);
+            this.label33.Size = new System.Drawing.Size(39, 20);
             this.label33.TabIndex = 16;
-            this.label33.Text = "ID:";
+            this.label33.Text = "ID :";
             // 
             // IDEditTextbox
             // 
@@ -667,12 +619,12 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(3, 163);
+            this.label34.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(17, 175);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(71, 24);
+            this.label34.Size = new System.Drawing.Size(74, 20);
             this.label34.TabIndex = 22;
-            this.label34.Text = "Author:";
+            this.label34.Text = "Author :";
             // 
             // ISBNEditTextbox
             // 
@@ -695,17 +647,17 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(3, 113);
+            this.label35.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(38, 113);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(50, 24);
+            this.label35.Size = new System.Drawing.Size(54, 20);
             this.label35.TabIndex = 20;
-            this.label35.Text = "Title:";
+            this.label35.Text = "Title :";
             // 
             // searchISBNButton
             // 
             this.searchISBNButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.searchISBNButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchISBNButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchISBNButton.Location = new System.Drawing.Point(200, 61);
             this.searchISBNButton.Name = "searchISBNButton";
             this.searchISBNButton.Size = new System.Drawing.Size(137, 33);
@@ -717,6 +669,7 @@
             // panelAdd
             // 
             this.panelAdd.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panelAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelAdd.Controls.Add(this.label18);
             this.panelAdd.Controls.Add(this.label17);
             this.panelAdd.Controls.Add(this.label16);
@@ -750,18 +703,18 @@
             this.panelAdd.Controls.Add(this.ISBNTextbox);
             this.panelAdd.Controls.Add(this.titleTextbox);
             this.panelAdd.Controls.Add(this.label4);
-            this.panelAdd.Location = new System.Drawing.Point(6, 5);
+            this.panelAdd.Location = new System.Drawing.Point(5, 5);
             this.panelAdd.Name = "panelAdd";
-            this.panelAdd.Size = new System.Drawing.Size(970, 357);
+            this.panelAdd.Size = new System.Drawing.Size(970, 366);
             this.panelAdd.TabIndex = 0;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.IndianRed;
-            this.label18.Location = new System.Drawing.Point(670, 64);
+            this.label18.Location = new System.Drawing.Point(339, 22);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(21, 26);
             this.label18.TabIndex = 51;
@@ -770,10 +723,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.IndianRed;
-            this.label17.Location = new System.Drawing.Point(307, 291);
+            this.label17.Location = new System.Drawing.Point(2, 308);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(21, 26);
             this.label17.TabIndex = 50;
@@ -782,10 +735,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.IndianRed;
-            this.label16.Location = new System.Drawing.Point(195, 162);
+            this.label16.Location = new System.Drawing.Point(1, 169);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(21, 26);
             this.label16.TabIndex = 49;
@@ -794,10 +747,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.IndianRed;
-            this.label14.Location = new System.Drawing.Point(307, 111);
+            this.label14.Location = new System.Drawing.Point(2, 111);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 26);
             this.label14.TabIndex = 47;
@@ -806,26 +759,15 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.IndianRed;
-            this.label13.Location = new System.Drawing.Point(307, 64);
+            this.label13.Location = new System.Drawing.Point(3, 67);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(21, 26);
             this.label13.TabIndex = 46;
             this.label13.Text = "*";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.IndianRed;
-            this.label7.Location = new System.Drawing.Point(218, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 26);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "*";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // clearButton
             // 
@@ -833,7 +775,7 @@
             this.clearButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.Location = new System.Drawing.Point(569, 307);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(131, 34);
@@ -846,20 +788,20 @@
             // authorIDbox
             // 
             this.authorIDbox.AutoSize = true;
-            this.authorIDbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authorIDbox.Location = new System.Drawing.Point(231, 163);
+            this.authorIDbox.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authorIDbox.Location = new System.Drawing.Point(228, 169);
             this.authorIDbox.Name = "authorIDbox";
-            this.authorIDbox.Size = new System.Drawing.Size(32, 24);
+            this.authorIDbox.Size = new System.Drawing.Size(39, 20);
             this.authorIDbox.TabIndex = 43;
-            this.authorIDbox.Text = "ID:";
+            this.authorIDbox.Text = "ID :";
             // 
             // addBookButton
             // 
-            this.addBookButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.addBookButton.BackColor = System.Drawing.Color.LawnGreen;
             this.addBookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.addBookButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBookButton.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBookButton.Location = new System.Drawing.Point(427, 307);
             this.addBookButton.Name = "addBookButton";
             this.addBookButton.Size = new System.Drawing.Size(136, 34);
@@ -875,12 +817,12 @@
             this.selectAuthorButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.selectAuthorButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectAuthorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selectAuthorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectAuthorButton.Location = new System.Drawing.Point(269, 148);
+            this.selectAuthorButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectAuthorButton.Location = new System.Drawing.Point(269, 152);
             this.selectAuthorButton.Name = "selectAuthorButton";
-            this.selectAuthorButton.Size = new System.Drawing.Size(68, 48);
+            this.selectAuthorButton.Size = new System.Drawing.Size(68, 61);
             this.selectAuthorButton.TabIndex = 9;
-            this.selectAuthorButton.Text = "Select Author";
+            this.selectAuthorButton.Text = "Select An Author";
             this.selectAuthorButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.selectAuthorButton.UseVisualStyleBackColor = false;
             this.selectAuthorButton.Click += new System.EventHandler(this.selectAuthorButton_Click);
@@ -888,7 +830,7 @@
             // authorTextbox
             // 
             this.authorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authorTextbox.Location = new System.Drawing.Point(92, 159);
+            this.authorTextbox.Location = new System.Drawing.Point(92, 165);
             this.authorTextbox.Multiline = true;
             this.authorTextbox.Name = "authorTextbox";
             this.authorTextbox.Size = new System.Drawing.Size(133, 31);
@@ -897,7 +839,7 @@
             // numericUpDownQuantity
             // 
             this.numericUpDownQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownQuantity.Location = new System.Drawing.Point(92, 248);
+            this.numericUpDownQuantity.Location = new System.Drawing.Point(92, 269);
             this.numericUpDownQuantity.Name = "numericUpDownQuantity";
             this.numericUpDownQuantity.Size = new System.Drawing.Size(101, 32);
             this.numericUpDownQuantity.TabIndex = 40;
@@ -906,7 +848,7 @@
             // 
             this.genreCombobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genreCombobox.FormattingEnabled = true;
-            this.genreCombobox.Location = new System.Drawing.Point(92, 202);
+            this.genreCombobox.Location = new System.Drawing.Point(92, 226);
             this.genreCombobox.Name = "genreCombobox";
             this.genreCombobox.Size = new System.Drawing.Size(245, 33);
             this.genreCombobox.TabIndex = 39;
@@ -914,12 +856,12 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 206);
+            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(27, 233);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 24);
+            this.label12.Size = new System.Drawing.Size(65, 20);
             this.label12.TabIndex = 38;
-            this.label12.Text = "Genre:";
+            this.label12.Text = "Genre :";
             // 
             // selectCoverButton
             // 
@@ -927,12 +869,12 @@
             this.selectCoverButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.selectCoverButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectCoverButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selectCoverButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectCoverButton.Location = new System.Drawing.Point(735, 292);
+            this.selectCoverButton.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectCoverButton.Location = new System.Drawing.Point(735, 301);
             this.selectCoverButton.Name = "selectCoverButton";
             this.selectCoverButton.Size = new System.Drawing.Size(214, 41);
             this.selectCoverButton.TabIndex = 9;
-            this.selectCoverButton.Text = "Select Cover";
+            this.selectCoverButton.Text = "Select A Book Cover";
             this.selectCoverButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.selectCoverButton.UseVisualStyleBackColor = false;
             this.selectCoverButton.Click += new System.EventHandler(this.selectCoverButton_Click);
@@ -940,37 +882,27 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(801, 8);
+            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(789, 17);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 24);
+            this.label11.Size = new System.Drawing.Size(104, 20);
             this.label11.TabIndex = 35;
-            this.label11.Text = "Cover:";
-            // 
-            // coverPicturebox
-            // 
-            this.coverPicturebox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.coverPicturebox.Location = new System.Drawing.Point(735, 35);
-            this.coverPicturebox.Name = "coverPicturebox";
-            this.coverPicturebox.Size = new System.Drawing.Size(214, 250);
-            this.coverPicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.coverPicturebox.TabIndex = 34;
-            this.coverPicturebox.TabStop = false;
+            this.label11.Text = "Book Cover";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(356, 65);
+            this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(356, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 24);
+            this.label10.Size = new System.Drawing.Size(91, 20);
             this.label10.TabIndex = 32;
-            this.label10.Text = "Publisher:";
+            this.label10.Text = "Publisher :";
             // 
             // publisherTextbox
             // 
             this.publisherTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publisherTextbox.Location = new System.Drawing.Point(456, 61);
+            this.publisherTextbox.Location = new System.Drawing.Point(456, 19);
             this.publisherTextbox.Multiline = true;
             this.publisherTextbox.Name = "publisherTextbox";
             this.publisherTextbox.Size = new System.Drawing.Size(244, 31);
@@ -978,26 +910,27 @@
             // 
             // dateReceivedDateTimePicker
             // 
+            this.dateReceivedDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateReceivedDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateReceivedDateTimePicker.Location = new System.Drawing.Point(500, 111);
+            this.dateReceivedDateTimePicker.Location = new System.Drawing.Point(492, 61);
             this.dateReceivedDateTimePicker.Name = "dateReceivedDateTimePicker";
-            this.dateReceivedDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateReceivedDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.dateReceivedDateTimePicker.TabIndex = 31;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(356, 109);
+            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(356, 65);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 24);
+            this.label9.Size = new System.Drawing.Size(129, 20);
             this.label9.TabIndex = 30;
-            this.label9.Text = "Date Received:";
+            this.label9.Text = "Date Received :";
             // 
             // priceTextbox
             // 
             this.priceTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTextbox.Location = new System.Drawing.Point(92, 288);
+            this.priceTextbox.Location = new System.Drawing.Point(92, 307);
             this.priceTextbox.Multiline = true;
             this.priceTextbox.Name = "priceTextbox";
             this.priceTextbox.Size = new System.Drawing.Size(245, 31);
@@ -1006,60 +939,62 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 292);
+            this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(33, 311);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 24);
+            this.label8.Size = new System.Drawing.Size(57, 20);
             this.label8.TabIndex = 28;
-            this.label8.Text = "Price:";
+            this.label8.Text = "Price :";
             // 
             // quantityBox
             // 
             this.quantityBox.AutoSize = true;
-            this.quantityBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityBox.Location = new System.Drawing.Point(3, 251);
+            this.quantityBox.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityBox.Location = new System.Drawing.Point(6, 275);
             this.quantityBox.Name = "quantityBox";
-            this.quantityBox.Size = new System.Drawing.Size(83, 24);
+            this.quantityBox.Size = new System.Drawing.Size(86, 20);
             this.quantityBox.TabIndex = 26;
-            this.quantityBox.Text = "Quantity:";
+            this.quantityBox.Text = "Quantity :";
             // 
             // aboutRichTextbox
             // 
-            this.aboutRichTextbox.Location = new System.Drawing.Point(427, 148);
+            this.aboutRichTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.aboutRichTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutRichTextbox.Location = new System.Drawing.Point(427, 106);
             this.aboutRichTextbox.Name = "aboutRichTextbox";
-            this.aboutRichTextbox.Size = new System.Drawing.Size(273, 153);
+            this.aboutRichTextbox.Size = new System.Drawing.Size(273, 195);
             this.aboutRichTextbox.TabIndex = 25;
             this.aboutRichTextbox.Text = "";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 65);
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 24);
+            this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 17;
-            this.label3.Text = "ISBN:";
+            this.label3.Text = "ISBN :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(356, 148);
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(356, 109);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 24);
+            this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 24;
-            this.label6.Text = "About:";
+            this.label6.Text = "About :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 21);
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 24);
+            this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 16;
-            this.label2.Text = "ID:";
+            this.label2.Text = "ID :";
             // 
             // idTextbox
             // 
@@ -1073,12 +1008,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 163);
+            this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
+            this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Author:";
+            this.label5.Text = "Author :";
             // 
             // ISBNTextbox
             // 
@@ -1101,12 +1036,129 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 113);
+            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(36, 111);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 24);
+            this.label4.Size = new System.Drawing.Size(54, 20);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Title:";
+            this.label4.Text = "Title :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.IndianRed;
+            this.label7.Location = new System.Drawing.Point(3, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 26);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "*";
+            // 
+            // coverEditPictureBox
+            // 
+            this.coverEditPictureBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.coverEditPictureBox.Location = new System.Drawing.Point(735, 51);
+            this.coverEditPictureBox.Name = "coverEditPictureBox";
+            this.coverEditPictureBox.Size = new System.Drawing.Size(214, 250);
+            this.coverEditPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coverEditPictureBox.TabIndex = 34;
+            this.coverEditPictureBox.TabStop = false;
+            // 
+            // coverPicturebox
+            // 
+            this.coverPicturebox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.coverPicturebox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.coverPicturebox.Location = new System.Drawing.Point(735, 45);
+            this.coverPicturebox.Name = "coverPicturebox";
+            this.coverPicturebox.Size = new System.Drawing.Size(214, 250);
+            this.coverPicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coverPicturebox.TabIndex = 34;
+            this.coverPicturebox.TabStop = false;
+            // 
+            // buttonExportBooks
+            // 
+            this.buttonExportBooks.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonExportBooks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonExportBooks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExportBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExportBooks.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExportBooks.Image = global::ManagementSystemProject.Properties.Resources.exporttotextfile;
+            this.buttonExportBooks.Location = new System.Drawing.Point(7, 328);
+            this.buttonExportBooks.Name = "buttonExportBooks";
+            this.buttonExportBooks.Size = new System.Drawing.Size(161, 86);
+            this.buttonExportBooks.TabIndex = 55;
+            this.buttonExportBooks.Text = "Export Books to text file";
+            this.buttonExportBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonExportBooks.UseVisualStyleBackColor = false;
+            this.buttonExportBooks.Click += new System.EventHandler(this.buttonExportBooks_Click);
+            // 
+            // showBookListButton
+            // 
+            this.showBookListButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.showBookListButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.showBookListButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showBookListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showBookListButton.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showBookListButton.Image = global::ManagementSystemProject.Properties.Resources.bookimage;
+            this.showBookListButton.Location = new System.Drawing.Point(7, 172);
+            this.showBookListButton.Name = "showBookListButton";
+            this.showBookListButton.Size = new System.Drawing.Size(161, 63);
+            this.showBookListButton.TabIndex = 53;
+            this.showBookListButton.Text = "Show Books";
+            this.showBookListButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.showBookListButton.UseVisualStyleBackColor = false;
+            this.showBookListButton.Click += new System.EventHandler(this.showBookListButton_Click);
+            // 
+            // removeButton1
+            // 
+            this.removeButton1.BackColor = System.Drawing.Color.LightCoral;
+            this.removeButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.removeButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.removeButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeButton1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeButton1.Image = global::ManagementSystemProject.Properties.Resources.deletebutton;
+            this.removeButton1.Location = new System.Drawing.Point(7, 251);
+            this.removeButton1.Name = "removeButton1";
+            this.removeButton1.Size = new System.Drawing.Size(161, 62);
+            this.removeButton1.TabIndex = 8;
+            this.removeButton1.Text = "Remove A Book";
+            this.removeButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.removeButton1.UseVisualStyleBackColor = false;
+            this.removeButton1.Click += new System.EventHandler(this.removeButton1_Click);
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(3, 111);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(16, 26);
+            this.label24.TabIndex = 54;
+            this.label24.Text = "*";
+            // 
+            // label36
+            // 
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(4, 65);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(16, 26);
+            this.label36.TabIndex = 55;
+            this.label36.Text = "*";
+            // 
+            // label37
+            // 
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.White;
+            this.label37.Location = new System.Drawing.Point(5, 17);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(16, 26);
+            this.label37.TabIndex = 56;
+            this.label37.Text = "*";
             // 
             // ManageBooksForm
             // 
@@ -1130,10 +1182,10 @@
             this.panelEdit.ResumeLayout(false);
             this.panelEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantityEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coverEditPictureBox)).EndInit();
             this.panelAdd.ResumeLayout(false);
             this.panelAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coverEditPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coverPicturebox)).EndInit();
             this.ResumeLayout(false);
 
@@ -1189,7 +1241,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button clearButton;
         public System.Windows.Forms.Label authorIDbox;
         private System.Windows.Forms.Button addBookButton;
@@ -1224,5 +1275,9 @@
         private System.Windows.Forms.Button buttonEditBookData;
         private System.Windows.Forms.Button buttonRemoveBookData;
         private System.Windows.Forms.Button buttonExportBooks;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label24;
     }
 }
