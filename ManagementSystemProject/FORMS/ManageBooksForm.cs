@@ -1,15 +1,8 @@
-﻿using ManagementSystemProject.CLASSES;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace ManagementSystemProject.FORMS
 {
     public partial class ManageBooksForm : Form
@@ -25,7 +18,6 @@ namespace ManagementSystemProject.FORMS
         {
             this.Close();
         }
-
         private void ManageBooksForm_Load(object sender, EventArgs e)
         {
             CLASSES.GENRE genre = new CLASSES.GENRE();
@@ -39,13 +31,9 @@ namespace ManagementSystemProject.FORMS
             genreCombobox.DisplayMember = "name";
             genreCombobox.ValueMember = "id";
             bookCountLabel.Text = book.BookList().Rows.Count.ToString() + " Books";
+            // brings the add book panel to the front
             panelAdd.BringToFront();
-
-
-
-
         }
-
         private void selectCoverButton_Click(object sender, EventArgs e)
         {
             // user picks the cover of the box by uploading a file, sets this image to the front cover displayed on the form
@@ -55,9 +43,7 @@ namespace ManagementSystemProject.FORMS
             {
                 coverPicturebox.Image = Image.FromFile(opf.FileName);
             }
-
         }
-
         private void editPictureCover_Click(object sender, EventArgs e)
         {
             // same as previous function but triggered from a different button (for editing an existing front cover)
@@ -68,7 +54,6 @@ namespace ManagementSystemProject.FORMS
                 coverEditPictureBox.Image = Image.FromFile(opf.FileName);
             }
         }
-
         private void selectAuthorButton_Click(object sender, EventArgs e)
         {
             // display the author list form when the user clicks the select author button
@@ -93,8 +78,7 @@ namespace ManagementSystemProject.FORMS
             coverPicturebox.Image.Save(ms, coverPicturebox.Image.RawFormat);
             byte[] bookCover = ms.ToArray();
             try
-            {
-                
+            {              
                 authorID = Convert.ToInt32(authorIDbox.Text);
                 genreID = Convert.ToInt32(genreCombobox.SelectedValue);
                 quantity = Convert.ToInt32(numericUpDownQuantity.Value);
@@ -148,11 +132,12 @@ namespace ManagementSystemProject.FORMS
             }
 
             int numberOfBooks = book.BookList().Rows.Count + 1;
-            int theLastBookId = 0;
-            if(numberOfBooks > 1)
-            {
-                theLastBookId = Convert.ToInt32((book.BookList().Rows.Count+1).ToString());
-            }
+            //int theLastBookId = 0;
+            int theLastBookId = numberOfBooks > 1 ? Convert.ToInt32((book.BookList().Rows.Count + 1).ToString()) : 0;
+            //if (numberOfBooks > 1)
+            //{
+            //    theLastBookId = Convert.ToInt32((book.BookList().Rows.Count+1).ToString());
+            //}
             // it will fill automatically place the ID of the last book into the ID field upon pressing the clear fields button
             idTextbox.Text = Convert.ToString(theLastBookId);
             aboutRichTextbox.Text = "";
@@ -170,7 +155,6 @@ namespace ManagementSystemProject.FORMS
             authorTextbox.Text = "";
             authorIDbox.Text = "ID:";
         }
-
         private void editButton1_Click(object sender, EventArgs e)
         {
             // bring the edit panel to the front
@@ -182,9 +166,6 @@ namespace ManagementSystemProject.FORMS
             authorEditTextbox.Text = "";
             anotherIDEdit.Text = "ID:";
         }
-
-        
-
         private void searchIDButton_Click(object sender, EventArgs e)
         {
             // searchbyIDbutton, checks if theres a valid ID in the box, then searches for the book
@@ -285,7 +266,6 @@ namespace ManagementSystemProject.FORMS
                 MessageBox.Show(ex.Message, "Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         public void DisplayData(DataTable data)
         {
             // display retrieved data from table to input fields
@@ -310,7 +290,6 @@ namespace ManagementSystemProject.FORMS
             MemoryStream ms = new MemoryStream(cover);
             coverEditPictureBox.Image = Image.FromStream(ms);
         }
-
         private void showBookListButton_Click(object sender, EventArgs e)
         {
             // displays a table of all books in the database
@@ -361,11 +340,13 @@ namespace ManagementSystemProject.FORMS
                 Directory.CreateDirectory("../books");
             }
             string filePath = "../books/booklist.txt";
+
             if (!File.Exists(filePath))
             {
                 File.Create(filePath).Close();
                 MessageBox.Show("File created.");
             }
+
             TextWriter writer = new StreamWriter(filePath);
             string id;
             string isbn;
@@ -383,7 +364,6 @@ namespace ManagementSystemProject.FORMS
             writer.Close();
             MessageBox.Show("Data exported.");
         }
-
         private void buttonRemoveBookData_Click(object sender, EventArgs e)
         {
             try
@@ -401,7 +381,8 @@ namespace ManagementSystemProject.FORMS
                         MessageBox.Show("Book has not been removed.", "Remove Book", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show("No book is selected. | " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }

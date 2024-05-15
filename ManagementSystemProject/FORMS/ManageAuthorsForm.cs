@@ -1,41 +1,28 @@
-﻿using ManagementSystemProject.CLASSES;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using System.IO;
-
 namespace ManagementSystemProject.FORMS
 {
     public partial class ManageAuthorsForm : Form
     {
+        CLASSES.AUTHOR author = new CLASSES.AUTHOR();
         public ManageAuthorsForm()
         {
             InitializeComponent();
         }
 
-        CLASSES.AUTHOR author = new CLASSES.AUTHOR();
-
         private void ManageAuthorsForm_Load(object sender, EventArgs e)
         {
+            // loads images + data, giving them styles too
             addButton1.Image = Image.FromFile("../../IMAGES/addbutton.png");
             editButton1.Image = Image.FromFile("../../IMAGES/editbutton.png");
             removeButton1.Image = Image.FromFile("../../IMAGES/deletebutton.png");
-
             dataGridViewAuthors.DataSource = author.AuthorList(false);
-
             dataGridViewAuthors.ColumnHeadersDefaultCellStyle.ForeColor = Color.Blue;
             dataGridViewAuthors.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
             dataGridViewAuthors.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
             dataGridViewAuthors.EnableHeadersVisualStyles = false;
-
             authorCountLabel.Text = author.AuthorList(false).Rows.Count.ToString() + " Authors";
         }
 
@@ -50,13 +37,14 @@ namespace ManagementSystemProject.FORMS
             string surname = snameTextbox.Text;
             string education = educationTextbox.Text;
             string about = aboutRichTextbox.Text;
-
+            // if a name + surname for author wasnt entered
             if(firstname.Trim().Equals("") || surname.Trim().Equals(""))
             {
                 MessageBox.Show("Enter a first name and surname for the Author.", "Empty Author Name", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                // if it succesfully adds the author
                 if (author.AddAuthor(firstname, surname, education, about))
                 {
                     MessageBox.Show("New Author has been added.", "New Author", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -120,6 +108,7 @@ namespace ManagementSystemProject.FORMS
                 int id = Convert.ToInt32(idTextbox.Text);
                 if(MessageBox.Show("Do you really want to delete this Author?", "Confirmation Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    // if it is able to remove the author, it will return true
                     if (author.RemoveAuthor(id))
                     {
                         MessageBox.Show("Author has been removed.", "Removed Author", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -135,8 +124,7 @@ namespace ManagementSystemProject.FORMS
                     {
                         MessageBox.Show("Author has not been removed.", "Remove Author", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                }
-                
+                }               
             }
             catch (Exception ex)
             {
@@ -146,23 +134,21 @@ namespace ManagementSystemProject.FORMS
 
         private void showAuthorBooksButton_Click(object sender, EventArgs e)
         {
-
             int authorID = Convert.ToInt32(dataGridViewAuthors.CurrentRow.Cells[0].Value);
-            string fname = dataGridViewAuthors.CurrentRow.Cells[1].Value.ToString();
-            string sname = dataGridViewAuthors.CurrentRow.Cells[2].Value.ToString();
-            string fullname = fname + " " + sname;
+            //string fname = dataGridViewAuthors.CurrentRow.Cells[1].Value.ToString();
+            //string sname = dataGridViewAuthors.CurrentRow.Cells[2].Value.ToString();
+            //string fullname = fname + " " + sname;
+            string fullname = dataGridViewAuthors.CurrentRow.Cells[1].Value.ToString() + " " + dataGridViewAuthors.CurrentRow.Cells[2].Value.ToString();
             BooksListForm BkLsFrm = new BooksListForm(authorID, fullname);
             BkLsFrm.Show();
         }
 
         private void buttonExportAuthors_Click(object sender, EventArgs e)
         {
-
             if(!Directory.Exists("../authors"))
             {
                 Directory.CreateDirectory("../authors");
             }
-
             string filePath = "../authors/List.txt";
 
             if(!File.Exists(filePath))
@@ -172,7 +158,6 @@ namespace ManagementSystemProject.FORMS
             }
 
             TextWriter writer = new StreamWriter(filePath);
-
             string id;
             string fname;
             string sname;
@@ -180,12 +165,6 @@ namespace ManagementSystemProject.FORMS
 
             for(int i = 0; i < dataGridViewAuthors.Rows.Count; i++)
             {
-                /*for(int j = 0; j < dataGridViewAuthors.Columns.Count; j++)
-                {
-                    writer.Write(dataGridViewAuthors.Rows[i].Cells[j].Value.ToString());
-
-                }*/
-
                 id = dataGridViewAuthors.Rows[i].Cells[0].Value.ToString();
                 fname = dataGridViewAuthors.Rows[i].Cells[1].Value.ToString();
                 sname = dataGridViewAuthors.Rows[i].Cells[2].Value.ToString();
@@ -194,10 +173,8 @@ namespace ManagementSystemProject.FORMS
                 writer.WriteLine("");
                 writer.WriteLine("-------------------------------------");
             }
-
             writer.Close();
             MessageBox.Show("Data exported.");
-
         }
     }
 }

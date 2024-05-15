@@ -2,18 +2,18 @@
 using System.Data;
 using System.Drawing;
 using System.IO;
-
 using System.Windows.Forms;
-
 namespace ManagementSystemProject.FORMS
 {
     public partial class DashboardForm : Form
     {
+        CLASSES.BOOKS book = new CLASSES.BOOKS();
+        CLASSES.AUTHOR author = new CLASSES.AUTHOR();
+        CLASSES.MEMBER member = new CLASSES.MEMBER();
         public DashboardForm()
         {
             InitializeComponent();
         }
-
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             // Loads the images contained on the Dashboard Form
@@ -22,16 +22,8 @@ namespace ManagementSystemProject.FORMS
             authorButton.Image = Image.FromFile("../../IMAGES/penimage.png");
             genreButton.Image = Image.FromFile("../../IMAGES/labelimage.png");
             circulationButton.Image = Image.FromFile("../../IMAGES/circulationimage.png");
-            userButton.Image = Image.FromFile("../../IMAGES/userimage2.png");
-
-
-            
-        }
-
-        
-        CLASSES.BOOKS book = new CLASSES.BOOKS();
-        CLASSES.AUTHOR author = new CLASSES.AUTHOR();
-        CLASSES.MEMBER member = new CLASSES.MEMBER();
+            userButton.Image = Image.FromFile("../../IMAGES/userimage2.png");    
+        }            
         private void pictureCloseButton_Click(object sender, EventArgs e)
         {
             // Close the window if the X button is pressed in the top right
@@ -75,19 +67,12 @@ namespace ManagementSystemProject.FORMS
                         {
                             Label label = (Label) labelControl;
                             label.Text = "£" + bookData.Rows[i][6].ToString();
-
-
                         }
                     }
                     i++;
-
-
                 }
             }
-
-
         }
-
         private void genreButton_Click(object sender, EventArgs e)
         {
             // Upons the genre form
@@ -95,7 +80,6 @@ namespace ManagementSystemProject.FORMS
             ManageGenresForm mngGnrF = new ManageGenresForm();
             mngGnrF.Show();
         }
-
         private void authorButton_Click(object sender, EventArgs e)
         {
             // Opens the author form
@@ -103,7 +87,6 @@ namespace ManagementSystemProject.FORMS
             ManageAuthorsForm mngAutF = new ManageAuthorsForm();
             mngAutF.Show();
         }
-
         private void bookButton_Click(object sender, EventArgs e)
         {
             // Opens the "books" form
@@ -112,7 +95,6 @@ namespace ManagementSystemProject.FORMS
             ManageBooksForm mngBookF = new ManageBooksForm();
             mngBookF.Show();
         }
-
         private void memberButton_Click(object sender, EventArgs e)
         {
             // Opens the "Members" form
@@ -120,7 +102,6 @@ namespace ManagementSystemProject.FORMS
             ManageMembersForm mngMemF = new ManageMembersForm();
             mngMemF.Show();
         }
-
         public void SelectedButton(Button btn)
         {
             // Changes the colour of a button when you click on it, while changing the OTHER buttons to a different colour
@@ -132,11 +113,8 @@ namespace ManagementSystemProject.FORMS
                     button.BackColor = System.Drawing.Color.FromArgb(128, 128, 128);
                 }
             }
-
             btn.BackColor = System.Drawing.Color.FromArgb(46, 204, 113);
-
         }
-
         private void circulationButton_Click(object sender, EventArgs e)
         {
             // Circulation form
@@ -144,7 +122,6 @@ namespace ManagementSystemProject.FORMS
             ManageCirculationForm mngCirF = new ManageCirculationForm();
             mngCirF.Show();
         }
-
         private void userButton_Click(object sender, EventArgs e)
         {
             // Users form

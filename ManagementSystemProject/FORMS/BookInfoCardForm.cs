@@ -1,15 +1,8 @@
-﻿using ManagementSystemProject.CLASSES;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace ManagementSystemProject.FORMS
 {
     public partial class BookInfoCardForm : Form
@@ -17,7 +10,6 @@ namespace ManagementSystemProject.FORMS
 
         int bookID;
         readonly CLASSES.BOOKS book = new CLASSES.BOOKS();
-        readonly CLASSES.AUTHOR author = new CLASSES.AUTHOR();
         public BookInfoCardForm(int id)
         {
             InitializeComponent();
@@ -54,7 +46,8 @@ namespace ManagementSystemProject.FORMS
                 MemoryStream ms = new MemoryStream(cover);
                 pictureBoxBookCover.Image = Image.FromStream(ms);
                 pictureBoxBookCover.BackgroundImageLayout = ImageLayout.Stretch;
-            } catch(Exception ex)
+            } 
+            catch(Exception ex)
             {
                 MessageBox.Show("No Book To Show: " + ex.Message);
                 labelQuantity.Visible = false;

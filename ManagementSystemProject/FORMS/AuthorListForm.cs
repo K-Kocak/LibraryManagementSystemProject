@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace ManagementSystemProject.FORMS
 {
     public partial class AuthorListForm : Form
@@ -43,10 +36,10 @@ namespace ManagementSystemProject.FORMS
                 string id = drv["id"].ToString();
                 mngBooks.authorTextbox.Text = fullname;
                 mngBooks.authorIDbox.Text = id;
-
                 mngBooks.authorEditTextbox.Text = fullname;
                 mngBooks.anotherIDEdit.Text = id;
-            } catch(Exception ex)
+            } 
+            catch(Exception ex)
             {
                 MessageBox.Show("No Author Selected." + ex.Message);
             }

@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using MySql.Data.MySqlClient;
-
 namespace ManagementSystemProject.THE_DATABASE
 {
     internal class MYDB
@@ -18,7 +12,6 @@ namespace ManagementSystemProject.THE_DATABASE
                 connection.Open();
             }
         }
-
         public void CloseConnection()
         {
             if (connection.State == System.Data.ConnectionState.Open)
@@ -26,12 +19,10 @@ namespace ManagementSystemProject.THE_DATABASE
                 connection.Close();
             }
         }
-
         public MySqlConnection GetConnection()
         {
             return connection;
         }
-
         public DataTable GetData(string query, MySqlParameter[] parameters)
         {
             MySqlCommand command = new MySqlCommand(query, GetConnection());
@@ -39,14 +30,12 @@ namespace ManagementSystemProject.THE_DATABASE
             {
                 command.Parameters.AddRange(parameters);
             }
-
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             adapter.SelectCommand = command;
             adapter.Fill(table);
             return table;
         }
-
         public int SetData(string query, MySqlParameter[] parameters)
         {
             MySqlCommand command = new MySqlCommand(query, GetConnection());
@@ -54,16 +43,11 @@ namespace ManagementSystemProject.THE_DATABASE
             {
                 command.Parameters.AddRange(parameters);
             }
-
             OpenConnection();
-
             int commandState = command.ExecuteNonQuery();
-
             CloseConnection();
-
             return commandState;
         }
-
 
         // ALTER TABLE books ADD CONSTRAINT fk_authorid FOREIGN KEY (authorid) REFERENCES authors(id) on UPDATE CASCADE on DELETE CASCADE;
         // ALTER TABLE books ADD CONSTRAINT fk_genreid FOREIGN KEY (genreid) REFERENCES genres(id) on UPDATE CASCADE on DELETE CASCADE;

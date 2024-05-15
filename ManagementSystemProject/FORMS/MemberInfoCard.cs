@@ -1,20 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace ManagementSystemProject.FORMS
 {
     public partial class MemberInfoCard : Form
     {
-        CLASSES.BOOKS book = new CLASSES.BOOKS();
-        CLASSES.AUTHOR author = new CLASSES.AUTHOR();
         CLASSES.MEMBER member = new CLASSES.MEMBER();
         int memberID;
         public MemberInfoCard(int id)

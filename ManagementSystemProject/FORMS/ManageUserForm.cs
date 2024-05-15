@@ -33,14 +33,9 @@ namespace ManagementSystemProject.FORMS
             string fname = labelFirstname.Text;
             string sname = labelSurname.Text;
             string username = labelUsername.Text;
-            string password = labelPassword.Text;  
+            string password = labelPassword.Text;
             // by default, usertype is "user", but if the admin checkbox is ticked, changes usertype to admin
-            string userType = "user";
-            if (checkBoxAdmin.Checked)
-            {
-                userType = "admin";
-            }
-
+            string userType = checkBoxAdmin.Checked ? "admin" : "user";
             if(verify())
             {
                 if (users.IsUsernameExist(username, 00))
@@ -104,8 +99,7 @@ namespace ManagementSystemProject.FORMS
                 {
                     // if ID is null or undefined because no ID was selected
                     MessageBox.Show("Enter the User ID by selecting it from the Table. | " + ex.Message, "ID Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
+                }            
             }
             else
             {
@@ -113,7 +107,6 @@ namespace ManagementSystemProject.FORMS
                 MessageBox.Show("Please fill in the fields correctly.", "Edit Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             try
@@ -134,8 +127,7 @@ namespace ManagementSystemProject.FORMS
                         labelPassword.Text = "";
                         labelPassword2.Text = "";
                         checkBoxAdmin.Checked = false;
-                        dataGridViewUsers.DataSource = users.UsersList();
-                        
+                        dataGridViewUsers.DataSource = users.UsersList();                     
                     }
                     else
                     {
@@ -149,7 +141,6 @@ namespace ManagementSystemProject.FORMS
                 MessageBox.Show(ex.Message, "Invalid ID");
             }
         }
-
         private void dataGridViewUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // if a cell in the table is clicked, retrieves the values on that row and fills in the input fields automatically
@@ -163,7 +154,6 @@ namespace ManagementSystemProject.FORMS
             // if user type is admin, check the admin box.
             checkBoxAdmin.Checked = userType.Equals("admin") ? true : false;
         }
-
         public Boolean verify()
         {
             string fname = labelFirstname.Text.Trim();
@@ -188,6 +178,5 @@ namespace ManagementSystemProject.FORMS
             }
         }          
     }
-
 }
 
