@@ -118,7 +118,17 @@ namespace ManagementSystemProject.Properties {
                 object obj = ResourceManager.GetObject("deletebutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
-        }              
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deletebutton1 {
+            get {
+                object obj = ResourceManager.GetObject("deletebutton1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -143,6 +153,16 @@ namespace ManagementSystemProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap issueimage {
+            get {
+                object obj = ResourceManager.GetObject("issueimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lockimage {
             get {
                 object obj = ResourceManager.GetObject("lockimage", resourceCulture);
@@ -156,6 +176,16 @@ namespace ManagementSystemProject.Properties {
         internal static System.Drawing.Bitmap membersicon {
             get {
                 object obj = ResourceManager.GetObject("membersicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap returnimage {
+            get {
+                object obj = ResourceManager.GetObject("returnimage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

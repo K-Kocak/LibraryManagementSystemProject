@@ -64,20 +64,21 @@ namespace ManagementSystemProject.CLASSES
         public Boolean ReturnBook(int bookID, int memberID, string status, DateTime issueDate, DateTime returnDate, string note)
         {
             // updates an issued book to either "lost" or "returned" depending on what "status" was passed in
-            string query = "UPDATE `issuebook` SET `status`=@stat, `returndate`=@returnDa, `note`=@note where `bookid`=@bId AND `memberID`=@mID AND `issueDate`=@issueDa";
+            // bug typo fix, bId should be bID, and bookid should be bookID
+            string query = "UPDATE `issuebook` SET `status`=@stat, `returndate`=@returnDa, `note`=@note WHERE `bookid`=@bID AND `memberid`=@mID AND `issuedate`=@issueDa";
             MySqlParameter[] parameter = new MySqlParameter[6];
-            parameter[0] = new MySqlParameter("@stat", MySqlDbType.VarChar);
-            parameter[0].Value = status;
-            parameter[1] = new MySqlParameter("@returnDa", MySqlDbType.Date);
-            parameter[1].Value = returnDate;
-            parameter[2] = new MySqlParameter("@note", MySqlDbType.VarChar);
-            parameter[2].Value = note;
-            parameter[3] = new MySqlParameter("@bID", MySqlDbType.Int32);
-            parameter[3].Value = bookID;
-            parameter[4] = new MySqlParameter("@mID", MySqlDbType.Int32);
-            parameter[4].Value = memberID;
-            parameter[5] = new MySqlParameter("@issueDa", MySqlDbType.Date);
-            parameter[5].Value = issueDate;
+            parameter[2] = new MySqlParameter("@stat", MySqlDbType.VarChar);
+            parameter[2].Value = status;
+            parameter[4] = new MySqlParameter("@returnDa", MySqlDbType.Date);
+            parameter[4].Value = returnDate;
+            parameter[5] = new MySqlParameter("@note", MySqlDbType.VarChar);
+            parameter[5].Value = note;
+            parameter[0] = new MySqlParameter("@bID", MySqlDbType.Int32);
+            parameter[0].Value = bookID;
+            parameter[1] = new MySqlParameter("@mID", MySqlDbType.Int32);
+            parameter[1].Value = memberID;
+            parameter[3] = new MySqlParameter("@issueDa", MySqlDbType.Date);
+            parameter[3].Value = issueDate;
 
             return db.SetData(query, parameter) == 1;
         }
@@ -98,7 +99,8 @@ namespace ManagementSystemProject.CLASSES
         public Boolean IsBookStillIssuedByMember(int memberID, int bookID)
         {
             // similar to removeBook, finds if a book issued is still "issued" as status for a given member & book id.
-            string query = "SELECT * FROM `issuebook` WHERE `status`=`issued` AND `bookID`=@bookid AND `memberID`=@memberid";
+            // bug fix, typo on query statement
+            string query = "SELECT * FROM `issuebook` WHERE status = 'issued' AND `bookID`=@bookid AND `memberID`=@memberid";
             MySqlParameter[] parameter = new MySqlParameter[2];
             parameter[0] = new MySqlParameter("@bookid", MySqlDbType.Int32);
             parameter[0].Value = bookID;

@@ -153,12 +153,16 @@ namespace ManagementSystemProject.FORMS
         private void buttonIssue_Click(object sender, EventArgs e)
         {
             panelIssue.BringToFront();
+            panelIssue.Visible = true;
+            panelReturn.Visible = false;
         }
 
         private void buttonReturn_Click(object sender, EventArgs e)
         {
             // brings the return panel to the front
+            panelReturn.Visible = true;
             panelReturn.BringToFront();
+            panelIssue.Visible = false;         
             dataGridViewIssuedBook.DataSource = issueBook.IssueBookList("");          
         }
 

@@ -210,11 +210,13 @@
     <Content Include="IMAGES\deletebutton.png" />
     <Content Include="IMAGES\editbutton.png" />
     <None Include="IMAGES\exporttotextfile.png" />
+    <None Include="IMAGES\issueimage.png" />
     <Content Include="IMAGES\labelimage.png" />
     <Content Include="IMAGES\lockimage.png" />
     <None Include="IMAGES\membersicon.png" />
     <Content Include="IMAGES\penimage.png" />
     <Content Include="IMAGES\randombookcover.png" />
+    <None Include="IMAGES\returnimage.png" />
     <Content Include="IMAGES\userimage.png" />
     <Content Include="IMAGES\userimage2.png" />
   </ItemGroup>

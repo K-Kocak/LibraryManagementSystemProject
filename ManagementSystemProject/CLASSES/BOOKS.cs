@@ -173,10 +173,11 @@ namespace ManagementSystemProject.CLASSES
 
         public bool BookQuantityMinusOne(int bookID)
         {
+            // bug fix, bid should be bID
             //used in circulation form for when a book is lost, reduces quantity by 1
             string query = "UPDATE `books` SET `quantity`=quantity-1 WHERE `id`=@bID";
             MySqlParameter[] parameter = new MySqlParameter[1];
-            parameter[0] = new MySqlParameter("@id", MySqlDbType.Int32);
+            parameter[0] = new MySqlParameter("@bID", MySqlDbType.Int32);
             parameter[0].Value = bookID;
             return db.SetData(query, parameter) == 1;
         }
