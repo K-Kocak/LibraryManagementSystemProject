@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-1, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(390, 93);
@@ -61,10 +61,13 @@
             // 
             // listBoxAuthors
             // 
+            this.listBoxAuthors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxAuthors.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxAuthors.FormattingEnabled = true;
+            this.listBoxAuthors.ItemHeight = 25;
             this.listBoxAuthors.Location = new System.Drawing.Point(6, 95);
             this.listBoxAuthors.Name = "listBoxAuthors";
-            this.listBoxAuthors.Size = new System.Drawing.Size(377, 290);
+            this.listBoxAuthors.Size = new System.Drawing.Size(377, 277);
             this.listBoxAuthors.TabIndex = 11;
             // 
             // selectAuthorAndCloseButton
@@ -73,8 +76,8 @@
             this.selectAuthorAndCloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.selectAuthorAndCloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectAuthorAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selectAuthorAndCloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectAuthorAndCloseButton.Location = new System.Drawing.Point(12, 388);
+            this.selectAuthorAndCloseButton.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectAuthorAndCloseButton.Location = new System.Drawing.Point(12, 381);
             this.selectAuthorAndCloseButton.Name = "selectAuthorAndCloseButton";
             this.selectAuthorAndCloseButton.Size = new System.Drawing.Size(365, 48);
             this.selectAuthorAndCloseButton.TabIndex = 12;

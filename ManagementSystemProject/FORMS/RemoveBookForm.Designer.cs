@@ -44,7 +44,7 @@
             this.closeWindow1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeWindow1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeWindow1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.closeWindow1.Location = new System.Drawing.Point(438, 8);
+            this.closeWindow1.Location = new System.Drawing.Point(438, 10);
             this.closeWindow1.Name = "closeWindow1";
             this.closeWindow1.Size = new System.Drawing.Size(33, 29);
             this.closeWindow1.TabIndex = 12;
@@ -55,50 +55,53 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-1, -2);
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(484, 57);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Remove Book";
+            this.label1.Text = "Remove a Book By ID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.numericUpDownBookID);
             this.panel1.Controls.Add(this.label33);
             this.panel1.Controls.Add(this.searchByIDButton);
-            this.panel1.Location = new System.Drawing.Point(4, 58);
+            this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(477, 214);
+            this.panel1.Size = new System.Drawing.Size(484, 219);
             this.panel1.TabIndex = 13;
             // 
             // numericUpDownBookID
             // 
-            this.numericUpDownBookID.Location = new System.Drawing.Point(239, 73);
+            this.numericUpDownBookID.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownBookID.Location = new System.Drawing.Point(239, 68);
             this.numericUpDownBookID.Name = "numericUpDownBookID";
-            this.numericUpDownBookID.Size = new System.Drawing.Size(103, 20);
+            this.numericUpDownBookID.Size = new System.Drawing.Size(103, 35);
             this.numericUpDownBookID.TabIndex = 55;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(136, 69);
+            this.label33.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(132, 73);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(80, 24);
+            this.label33.Size = new System.Drawing.Size(101, 25);
             this.label33.TabIndex = 17;
             this.label33.Text = "Book ID:";
             // 
             // searchByIDButton
             // 
-            this.searchByIDButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.searchByIDButton.BackColor = System.Drawing.Color.LightCoral;
             this.searchByIDButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchByIDButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchByIDButton.Location = new System.Drawing.Point(140, 131);
+            this.searchByIDButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchByIDButton.Location = new System.Drawing.Point(125, 130);
             this.searchByIDButton.Name = "searchByIDButton";
-            this.searchByIDButton.Size = new System.Drawing.Size(202, 43);
+            this.searchByIDButton.Size = new System.Drawing.Size(228, 60);
             this.searchByIDButton.TabIndex = 54;
             this.searchByIDButton.Text = "Remove this book";
             this.searchByIDButton.UseVisualStyleBackColor = false;
@@ -108,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(484, 273);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.closeWindow1);

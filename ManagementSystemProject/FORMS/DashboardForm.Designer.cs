@@ -262,7 +262,7 @@
             this.panel7.Controls.Add(this.panelBook1);
             this.panel7.Location = new System.Drawing.Point(9, 287);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(796, 242);
+            this.panel7.Size = new System.Drawing.Size(796, 250);
             this.panel7.TabIndex = 2;
             // 
             // panelBook4
