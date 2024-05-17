@@ -282,5 +282,10 @@ namespace ManagementSystemProject.FORMS
         {
             dataGridViewIssuedBook.DataSource = issueBook.IssueBookList("");
         }
+
+        private void refreshbutton_Click(object sender, EventArgs e)
+        {
+            dataGridViewIssuedBook.DataSource = issueBook.IssueBookList("");
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
             this.closeWindow1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookCover)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,103 +51,104 @@
             this.pictureBoxBookCover.Location = new System.Drawing.Point(11, 12);
             this.pictureBoxBookCover.Name = "pictureBoxBookCover";
             this.pictureBoxBookCover.Size = new System.Drawing.Size(234, 365);
+            this.pictureBoxBookCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBookCover.TabIndex = 0;
             this.pictureBoxBookCover.TabStop = false;
             // 
             // labelISBN
             // 
             this.labelISBN.AutoSize = true;
-            this.labelISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelISBN.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelISBN.Location = new System.Drawing.Point(251, 12);
             this.labelISBN.Name = "labelISBN";
             this.labelISBN.Padding = new System.Windows.Forms.Padding(3);
-            this.labelISBN.Size = new System.Drawing.Size(76, 32);
+            this.labelISBN.Size = new System.Drawing.Size(84, 31);
             this.labelISBN.TabIndex = 59;
-            this.labelISBN.Text = "ISBN:";
+            this.labelISBN.Text = "ISBN :";
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(251, 75);
+            this.labelTitle.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(251, 53);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Padding = new System.Windows.Forms.Padding(3);
-            this.labelTitle.Size = new System.Drawing.Size(64, 32);
+            this.labelTitle.Size = new System.Drawing.Size(76, 31);
             this.labelTitle.TabIndex = 60;
-            this.labelTitle.Text = "Title:";
+            this.labelTitle.Text = "Title :";
             // 
             // labelAuthor
             // 
             this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAuthor.Location = new System.Drawing.Point(251, 137);
+            this.labelAuthor.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAuthor.Location = new System.Drawing.Point(251, 94);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Padding = new System.Windows.Forms.Padding(3);
-            this.labelAuthor.Size = new System.Drawing.Size(88, 32);
+            this.labelAuthor.Size = new System.Drawing.Size(99, 31);
             this.labelAuthor.TabIndex = 61;
-            this.labelAuthor.Text = "Author:";
+            this.labelAuthor.Text = "Author :";
             // 
             // labelGenre
             // 
             this.labelGenre.AutoSize = true;
-            this.labelGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenre.Location = new System.Drawing.Point(251, 200);
+            this.labelGenre.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGenre.Location = new System.Drawing.Point(251, 135);
             this.labelGenre.Name = "labelGenre";
             this.labelGenre.Padding = new System.Windows.Forms.Padding(3);
-            this.labelGenre.Size = new System.Drawing.Size(84, 32);
+            this.labelGenre.Size = new System.Drawing.Size(90, 31);
             this.labelGenre.TabIndex = 62;
-            this.labelGenre.Text = "Genre:";
+            this.labelGenre.Text = "Genre :";
             // 
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuantity.Location = new System.Drawing.Point(348, 261);
+            this.labelQuantity.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuantity.Location = new System.Drawing.Point(366, 177);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Padding = new System.Windows.Forms.Padding(3);
-            this.labelQuantity.Size = new System.Drawing.Size(42, 32);
+            this.labelQuantity.Size = new System.Drawing.Size(42, 31);
             this.labelQuantity.TabIndex = 63;
             this.labelQuantity.Text = "99";
             // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrice.Location = new System.Drawing.Point(251, 326);
+            this.labelPrice.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Location = new System.Drawing.Point(255, 221);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Padding = new System.Windows.Forms.Padding(3);
-            this.labelPrice.Size = new System.Drawing.Size(74, 32);
+            this.labelPrice.Size = new System.Drawing.Size(80, 31);
             this.labelPrice.TabIndex = 64;
-            this.labelPrice.Text = "Price:";
+            this.labelPrice.Text = "Price :";
             // 
             // labelDateAdded
             // 
             this.labelDateAdded.AutoSize = true;
-            this.labelDateAdded.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDateAdded.Location = new System.Drawing.Point(251, 455);
+            this.labelDateAdded.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDateAdded.Location = new System.Drawing.Point(251, 312);
             this.labelDateAdded.Name = "labelDateAdded";
             this.labelDateAdded.Padding = new System.Windows.Forms.Padding(3);
-            this.labelDateAdded.Size = new System.Drawing.Size(139, 32);
+            this.labelDateAdded.Size = new System.Drawing.Size(147, 31);
             this.labelDateAdded.TabIndex = 65;
-            this.labelDateAdded.Text = "Date Added:";
+            this.labelDateAdded.Text = "Date Added :";
             // 
             // labelPublisher
             // 
             this.labelPublisher.AutoSize = true;
-            this.labelPublisher.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPublisher.Location = new System.Drawing.Point(251, 391);
+            this.labelPublisher.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPublisher.Location = new System.Drawing.Point(251, 266);
             this.labelPublisher.Name = "labelPublisher";
             this.labelPublisher.Padding = new System.Windows.Forms.Padding(3);
-            this.labelPublisher.Size = new System.Drawing.Size(115, 32);
+            this.labelPublisher.Size = new System.Drawing.Size(120, 31);
             this.labelPublisher.TabIndex = 66;
-            this.labelPublisher.Text = "Publisher:";
+            this.labelPublisher.Text = "Publisher :";
             // 
             // richTextBoxDescription
             // 
             this.richTextBoxDescription.Enabled = false;
-            this.richTextBoxDescription.Location = new System.Drawing.Point(11, 391);
+            this.richTextBoxDescription.Location = new System.Drawing.Point(12, 392);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
-            this.richTextBoxDescription.Size = new System.Drawing.Size(234, 96);
+            this.richTextBoxDescription.Size = new System.Drawing.Size(600, 95);
             this.richTextBoxDescription.TabIndex = 67;
             this.richTextBoxDescription.Text = "";
             // 
@@ -167,13 +169,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(251, 261);
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(251, 177);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(3);
-            this.label1.Size = new System.Drawing.Size(105, 32);
+            this.label1.Size = new System.Drawing.Size(115, 31);
             this.label1.TabIndex = 69;
-            this.label1.Text = "Quantity:";
+            this.label1.Text = "Quantity :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(251, 353);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(3);
+            this.label2.Size = new System.Drawing.Size(91, 31);
+            this.label2.TabIndex = 70;
+            this.label2.Text = "About :";
             // 
             // BookInfoCardForm
             // 
@@ -181,6 +194,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(624, 499);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.closeWindow1);
             this.Controls.Add(this.richTextBoxDescription);
@@ -218,5 +232,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxDescription;
         private System.Windows.Forms.Label closeWindow1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

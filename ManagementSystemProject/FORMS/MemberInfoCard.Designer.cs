@@ -55,65 +55,67 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(263, 111);
+            this.labelEmail.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(252, 118);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Padding = new System.Windows.Forms.Padding(3);
-            this.labelEmail.Size = new System.Drawing.Size(80, 32);
+            this.labelEmail.Size = new System.Drawing.Size(87, 31);
             this.labelEmail.TabIndex = 74;
-            this.labelEmail.Text = "Email:";
+            this.labelEmail.Text = "Email :";
             // 
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
-            this.labelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhone.Location = new System.Drawing.Point(263, 159);
+            this.labelPhone.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPhone.Location = new System.Drawing.Point(252, 166);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Padding = new System.Windows.Forms.Padding(3);
-            this.labelPhone.Size = new System.Drawing.Size(87, 32);
+            this.labelPhone.Size = new System.Drawing.Size(91, 31);
             this.labelPhone.TabIndex = 73;
-            this.labelPhone.Text = "Phone:";
+            this.labelPhone.Text = "Phone :";
             // 
             // labelGender
             // 
             this.labelGender.AutoSize = true;
-            this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGender.Location = new System.Drawing.Point(263, 207);
+            this.labelGender.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGender.Location = new System.Drawing.Point(252, 219);
             this.labelGender.Name = "labelGender";
             this.labelGender.Padding = new System.Windows.Forms.Padding(3);
-            this.labelGender.Size = new System.Drawing.Size(96, 32);
+            this.labelGender.Size = new System.Drawing.Size(102, 31);
             this.labelGender.TabIndex = 72;
-            this.labelGender.Text = "Gender:";
+            this.labelGender.Text = "Gender :";
             // 
             // labelFullname
             // 
             this.labelFullname.AutoSize = true;
-            this.labelFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFullname.Location = new System.Drawing.Point(263, 63);
+            this.labelFullname.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFullname.Location = new System.Drawing.Point(252, 66);
             this.labelFullname.Name = "labelFullname";
             this.labelFullname.Padding = new System.Windows.Forms.Padding(3);
-            this.labelFullname.Size = new System.Drawing.Size(120, 32);
+            this.labelFullname.Size = new System.Drawing.Size(126, 31);
             this.labelFullname.TabIndex = 71;
-            this.labelFullname.Text = "Full name:";
+            this.labelFullname.Text = "Full name :";
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(263, 15);
+            this.labelID.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.Location = new System.Drawing.Point(252, 15);
             this.labelID.Name = "labelID";
             this.labelID.Padding = new System.Windows.Forms.Padding(3);
-            this.labelID.Size = new System.Drawing.Size(46, 32);
+            this.labelID.Size = new System.Drawing.Size(56, 31);
             this.labelID.TabIndex = 70;
-            this.labelID.Text = "ID:";
+            this.labelID.Text = "ID :";
             // 
             // pictureBoxMemberPic
             // 
-            this.pictureBoxMemberPic.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBoxMemberPic.BackColor = System.Drawing.Color.Lavender;
             this.pictureBoxMemberPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxMemberPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxMemberPic.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxMemberPic.Name = "pictureBoxMemberPic";
             this.pictureBoxMemberPic.Size = new System.Drawing.Size(234, 239);
+            this.pictureBoxMemberPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMemberPic.TabIndex = 69;
             this.pictureBoxMemberPic.TabStop = false;
             // 

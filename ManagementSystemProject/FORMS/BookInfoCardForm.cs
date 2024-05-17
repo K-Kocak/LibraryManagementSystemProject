@@ -24,12 +24,13 @@ namespace ManagementSystemProject.FORMS
             //int id = 00;
             try
             {
+                // UI Improvements
                 // Gets info on specified book, and fills out text boxes with the data from that book
                 DataRow data = book.GetBookInfo(bookID);
-                labelISBN.Text = data["isbn"].ToString();
-                labelTitle.Text = data["title"].ToString();
-                labelAuthor.Text = data["author"].ToString();
-                labelGenre.Text = data["genre"].ToString();
+                labelISBN.Text = "ISBN : " + data["isbn"].ToString();
+                labelTitle.Text = "Title : " + data["title"].ToString();
+                labelAuthor.Text = "Author : " + data["author"].ToString();
+                labelGenre.Text = "Genre : " + data["genre"].ToString();
                 int qty = Convert.ToInt32(data["quantity"].ToString());
                 // qty == 0 meaning no books
                 if(qty == 0)
@@ -37,9 +38,9 @@ namespace ManagementSystemProject.FORMS
                     labelQuantity.BackColor = Color.Red;
                 }
                 labelQuantity.Text = data["quantity"].ToString();
-                labelPrice.Text = data["price"].ToString();
-                labelPublisher.Text = data["publisher"].ToString();
-                labelDateAdded.Text = data["dateReceived"].ToString();
+                labelPrice.Text = "Price : " + data["price"].ToString();
+                labelPublisher.Text = "Publisher : " + data["publisher"].ToString();
+                labelDateAdded.Text = "Date Added : " + data["dateReceived"].ToString();
                 richTextBoxDescription.Text = data["about"].ToString();
                 // display the cover of the book on the form
                 byte[] cover = (byte[])data["cover"];
@@ -50,6 +51,8 @@ namespace ManagementSystemProject.FORMS
             catch(Exception ex)
             {
                 MessageBox.Show("No Book To Show: " + ex.Message);
+                // bug fix
+                this.Close();
                 labelQuantity.Visible = false;
             }
             

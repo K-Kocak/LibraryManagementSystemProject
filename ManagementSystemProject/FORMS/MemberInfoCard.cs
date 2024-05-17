@@ -26,6 +26,13 @@ namespace ManagementSystemProject.FORMS
             {
                 // loads the card for a particular member, goes into getMemberByID to find this user, once found, uses this data to fill in the fields
                 DataRow data = member.GetMemberByID(memberID);
+                // bug fix
+                if (data == null)
+                {
+                    MessageBox.Show("No Member ID Entered", "No ID", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                    return;
+                }
                 labelID.Text = data["id"].ToString();
                 labelFullname.Text = data["firstname"].ToString() + " " + data["surname"].ToString();
                 labelGender.Text = data["gender"].ToString();

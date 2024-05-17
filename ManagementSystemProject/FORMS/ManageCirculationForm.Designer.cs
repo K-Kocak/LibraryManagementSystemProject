@@ -53,6 +53,7 @@
             this.numericUpDownMemberID = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.panelReturn = new System.Windows.Forms.Panel();
+            this.refreshbutton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.buttonAll = new System.Windows.Forms.Button();
             this.buttonLost = new System.Windows.Forms.Button();
@@ -130,11 +131,11 @@
             this.buttonReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonReturn.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReturn.Image = global::ManagementSystemProject.Properties.Resources.returnimage;
-            this.buttonReturn.Location = new System.Drawing.Point(13, 92);
+            this.buttonReturn.Location = new System.Drawing.Point(13, 116);
             this.buttonReturn.Name = "buttonReturn";
-            this.buttonReturn.Size = new System.Drawing.Size(161, 58);
+            this.buttonReturn.Size = new System.Drawing.Size(161, 66);
             this.buttonReturn.TabIndex = 54;
-            this.buttonReturn.Text = "Return";
+            this.buttonReturn.Text = "Return a Book";
             this.buttonReturn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonReturn.UseVisualStyleBackColor = false;
             this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
@@ -149,23 +150,23 @@
             this.buttonIssue.Image = global::ManagementSystemProject.Properties.Resources.issueimage;
             this.buttonIssue.Location = new System.Drawing.Point(13, 23);
             this.buttonIssue.Name = "buttonIssue";
-            this.buttonIssue.Size = new System.Drawing.Size(161, 61);
+            this.buttonIssue.Size = new System.Drawing.Size(161, 69);
             this.buttonIssue.TabIndex = 53;
-            this.buttonIssue.Text = "Issue";
+            this.buttonIssue.Text = "Issue a Book";
             this.buttonIssue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonIssue.UseVisualStyleBackColor = false;
             this.buttonIssue.Click += new System.EventHandler(this.buttonIssue_Click);
             // 
             // bookCountLabel
             // 
-            this.bookCountLabel.AutoSize = true;
             this.bookCountLabel.BackColor = System.Drawing.SystemColors.Info;
             this.bookCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookCountLabel.Location = new System.Drawing.Point(39, 516);
+            this.bookCountLabel.Location = new System.Drawing.Point(12, 515);
             this.bookCountLabel.Name = "bookCountLabel";
-            this.bookCountLabel.Size = new System.Drawing.Size(117, 24);
+            this.bookCountLabel.Size = new System.Drawing.Size(162, 24);
             this.bookCountLabel.TabIndex = 52;
             this.bookCountLabel.Text = "99999 Books";
+            this.bookCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelIssue
             // 
@@ -378,6 +379,7 @@
             // 
             this.panelReturn.BackColor = System.Drawing.Color.GreenYellow;
             this.panelReturn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelReturn.Controls.Add(this.refreshbutton);
             this.panelReturn.Controls.Add(this.label11);
             this.panelReturn.Controls.Add(this.buttonAll);
             this.panelReturn.Controls.Add(this.buttonLost);
@@ -403,6 +405,19 @@
             this.panelReturn.Name = "panelReturn";
             this.panelReturn.Size = new System.Drawing.Size(963, 537);
             this.panelReturn.TabIndex = 73;
+            // 
+            // refreshbutton
+            // 
+            this.refreshbutton.BackColor = System.Drawing.Color.Lavender;
+            this.refreshbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshbutton.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshbutton.Location = new System.Drawing.Point(625, 483);
+            this.refreshbutton.Name = "refreshbutton";
+            this.refreshbutton.Size = new System.Drawing.Size(295, 43);
+            this.refreshbutton.TabIndex = 80;
+            this.refreshbutton.Text = "Refresh Table";
+            this.refreshbutton.UseVisualStyleBackColor = false;
+            this.refreshbutton.Click += new System.EventHandler(this.refreshbutton_Click);
             // 
             // label11
             // 
@@ -521,7 +536,7 @@
             this.buttonDelete.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Location = new System.Drawing.Point(329, 484);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(591, 43);
+            this.buttonDelete.Size = new System.Drawing.Size(290, 43);
             this.buttonDelete.TabIndex = 72;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = false;
@@ -550,7 +565,7 @@
             this.dateTimePickerIssueDate2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePickerIssueDate2.Enabled = false;
             this.dateTimePickerIssueDate2.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerIssueDate2.Location = new System.Drawing.Point(122, 286);
+            this.dateTimePickerIssueDate2.Location = new System.Drawing.Point(122, 276);
             this.dateTimePickerIssueDate2.Name = "dateTimePickerIssueDate2";
             this.dateTimePickerIssueDate2.Size = new System.Drawing.Size(184, 29);
             this.dateTimePickerIssueDate2.TabIndex = 67;
@@ -579,7 +594,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(18, 290);
+            this.label10.Location = new System.Drawing.Point(18, 280);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 23);
             this.label10.TabIndex = 64;
@@ -588,22 +603,22 @@
             // labelMember2
             // 
             this.labelMember2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelMember2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMember2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.labelMember2.Location = new System.Drawing.Point(19, 200);
+            this.labelMember2.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMember2.ForeColor = System.Drawing.Color.Crimson;
+            this.labelMember2.Location = new System.Drawing.Point(15, 200);
             this.labelMember2.Name = "labelMember2";
-            this.labelMember2.Size = new System.Drawing.Size(277, 73);
+            this.labelMember2.Size = new System.Drawing.Size(281, 44);
             this.labelMember2.TabIndex = 61;
             this.labelMember2.Text = "Member fullname";
             // 
             // labelTitle2
             // 
             this.labelTitle2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelTitle2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.labelTitle2.Location = new System.Drawing.Point(29, 104);
+            this.labelTitle2.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle2.ForeColor = System.Drawing.Color.Crimson;
+            this.labelTitle2.Location = new System.Drawing.Point(15, 98);
             this.labelTitle2.Name = "labelTitle2";
-            this.labelTitle2.Size = new System.Drawing.Size(267, 62);
+            this.labelTitle2.Size = new System.Drawing.Size(289, 53);
             this.labelTitle2.TabIndex = 60;
             this.labelTitle2.Text = "Book title";
             // 
@@ -669,7 +684,6 @@
             this.Text = "ManageCirculationForm";
             this.Load += new System.EventHandler(this.ManageCirculationForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panelIssue.ResumeLayout(false);
             this.panelIssue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBookID)).EndInit();
@@ -731,5 +745,6 @@
         private System.Windows.Forms.Button buttonIssued;
         private System.Windows.Forms.Button buttonAll;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button refreshbutton;
     }
 }
