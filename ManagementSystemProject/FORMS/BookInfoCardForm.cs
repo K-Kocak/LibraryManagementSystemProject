@@ -25,6 +25,7 @@ namespace ManagementSystemProject.FORMS
             try
             {
                 // UI Improvements
+
                 // Gets info on specified book, and fills out text boxes with the data from that book
                 DataRow data = book.GetBookInfo(bookID);
                 labelISBN.Text = "ISBN : " + data["isbn"].ToString();
