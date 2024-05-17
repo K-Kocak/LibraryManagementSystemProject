@@ -48,6 +48,7 @@
             // 
             this.pictureBoxBookCover.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBoxBookCover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBookCover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxBookCover.Location = new System.Drawing.Point(11, 12);
             this.pictureBoxBookCover.Name = "pictureBoxBookCover";
             this.pictureBoxBookCover.Size = new System.Drawing.Size(234, 365);
@@ -145,6 +146,7 @@
             // 
             // richTextBoxDescription
             // 
+            this.richTextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBoxDescription.Enabled = false;
             this.richTextBoxDescription.Location = new System.Drawing.Point(12, 392);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
@@ -192,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(624, 499);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

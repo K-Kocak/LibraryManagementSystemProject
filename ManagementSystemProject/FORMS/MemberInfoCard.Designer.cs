@@ -54,12 +54,11 @@
             // 
             // labelEmail
             // 
-            this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(252, 118);
+            this.labelEmail.Location = new System.Drawing.Point(252, 111);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Padding = new System.Windows.Forms.Padding(3);
-            this.labelEmail.Size = new System.Drawing.Size(87, 31);
+            this.labelEmail.Size = new System.Drawing.Size(310, 68);
             this.labelEmail.TabIndex = 74;
             this.labelEmail.Text = "Email :";
             // 
@@ -67,7 +66,7 @@
             // 
             this.labelPhone.AutoSize = true;
             this.labelPhone.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhone.Location = new System.Drawing.Point(252, 166);
+            this.labelPhone.Location = new System.Drawing.Point(252, 179);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Padding = new System.Windows.Forms.Padding(3);
             this.labelPhone.Size = new System.Drawing.Size(91, 31);
@@ -87,12 +86,11 @@
             // 
             // labelFullname
             // 
-            this.labelFullname.AutoSize = true;
             this.labelFullname.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFullname.Location = new System.Drawing.Point(252, 66);
+            this.labelFullname.Location = new System.Drawing.Point(252, 46);
             this.labelFullname.Name = "labelFullname";
             this.labelFullname.Padding = new System.Windows.Forms.Padding(3);
-            this.labelFullname.Size = new System.Drawing.Size(126, 31);
+            this.labelFullname.Size = new System.Drawing.Size(305, 65);
             this.labelFullname.TabIndex = 71;
             this.labelFullname.Text = "Full name :";
             // 
@@ -109,7 +107,7 @@
             // 
             // pictureBoxMemberPic
             // 
-            this.pictureBoxMemberPic.BackColor = System.Drawing.Color.Lavender;
+            this.pictureBoxMemberPic.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBoxMemberPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxMemberPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxMemberPic.Location = new System.Drawing.Point(12, 12);
@@ -123,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkOrange;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(574, 267);
             this.Controls.Add(this.closeWindow1);
             this.Controls.Add(this.labelEmail);

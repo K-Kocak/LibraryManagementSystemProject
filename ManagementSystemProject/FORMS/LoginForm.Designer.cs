@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textboxPassword = new System.Windows.Forms.TextBox();
-            this.textboxUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureLock = new System.Windows.Forms.PictureBox();
+            this.textboxUsername = new System.Windows.Forms.TextBox();
             this.pictureUser = new System.Windows.Forms.PictureBox();
             this.closeLoginWindow = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
@@ -43,7 +43,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel1.BackColor = System.Drawing.SystemColors.Info;
             this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.textboxPassword);
             this.panel1.Controls.Add(this.pictureLock);
@@ -80,27 +80,6 @@
             this.textboxPassword.Text = "1234";
             this.textboxPassword.UseSystemPasswordChar = true;
             // 
-            // textboxUsername
-            // 
-            this.textboxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxUsername.Location = new System.Drawing.Point(97, 118);
-            this.textboxUsername.Multiline = true;
-            this.textboxUsername.Name = "textboxUsername";
-            this.textboxUsername.Size = new System.Drawing.Size(297, 41);
-            this.textboxUsername.TabIndex = 3;
-            this.textboxUsername.Text = "usertest";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(434, 83);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "User Login";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pictureLock
             // 
             this.pictureLock.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -111,6 +90,16 @@
             this.pictureLock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureLock.TabIndex = 4;
             this.pictureLock.TabStop = false;
+            // 
+            // textboxUsername
+            // 
+            this.textboxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxUsername.Location = new System.Drawing.Point(97, 118);
+            this.textboxUsername.Multiline = true;
+            this.textboxUsername.Name = "textboxUsername";
+            this.textboxUsername.Size = new System.Drawing.Size(297, 41);
+            this.textboxUsername.TabIndex = 3;
+            this.textboxUsername.Text = "usertest";
             // 
             // pictureUser
             // 
@@ -142,6 +131,18 @@
             this.closeLoginWindow.Click += new System.EventHandler(this.closeLoginWindow_Click);
             this.closeLoginWindow.MouseEnter += new System.EventHandler(this.closeLoginWindow_MouseEnter);
             this.closeLoginWindow.MouseLeave += new System.EventHandler(this.closeLoginWindow_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(434, 83);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User Login";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginForm
             // 

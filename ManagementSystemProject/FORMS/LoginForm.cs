@@ -85,6 +85,7 @@ namespace ManagementSystemProject.FORMS
                     dashF.Enabled = true;
                     dashF.userButton.Enabled = false;
                     dashF.circulationButton.Enabled = false;
+                    dashF.memberButton.Enabled = false;
                     this.Close();
                 }
             }

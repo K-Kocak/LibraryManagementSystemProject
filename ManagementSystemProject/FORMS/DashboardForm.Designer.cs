@@ -541,8 +541,8 @@
         private System.Windows.Forms.Label labelPrice3;
         private System.Windows.Forms.Label labelPrice2;
         private System.Windows.Forms.Label labelPrice1;
-        private System.Windows.Forms.Button memberButton;
         public System.Windows.Forms.Button userButton;
         public System.Windows.Forms.Button circulationButton;
+        public System.Windows.Forms.Button memberButton;
     }
 }

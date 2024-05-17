@@ -351,11 +351,11 @@ namespace ManagementSystemProject.FORMS
         {
             // creates a file which will list the id, isbn and title of all books
             showBookListButton.PerformClick();
-            if (!Directory.Exists("../books"))
+            if (!Directory.Exists("../../../books"))
             {
-                Directory.CreateDirectory("../books");
+                Directory.CreateDirectory("../../../books");
             }
-            string filePath = "../books/booklist.txt";
+            string filePath = "../../../books/booklist.txt";
 
             if (!File.Exists(filePath))
             {

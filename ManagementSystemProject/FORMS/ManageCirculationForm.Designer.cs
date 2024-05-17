@@ -160,6 +160,7 @@
             // bookCountLabel
             // 
             this.bookCountLabel.BackColor = System.Drawing.SystemColors.Info;
+            this.bookCountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bookCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookCountLabel.Location = new System.Drawing.Point(12, 515);
             this.bookCountLabel.Name = "bookCountLabel";
@@ -171,6 +172,7 @@
             // panelIssue
             // 
             this.panelIssue.BackColor = System.Drawing.Color.OldLace;
+            this.panelIssue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelIssue.Controls.Add(this.buttonIssueBook);
             this.panelIssue.Controls.Add(this.buttonSearchMember);
             this.panelIssue.Controls.Add(this.buttonSearchBook);
@@ -233,6 +235,7 @@
             // 
             // richTextBoxNote
             // 
+            this.richTextBoxNote.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxNote.Location = new System.Drawing.Point(317, 321);
             this.richTextBoxNote.Name = "richTextBoxNote";
             this.richTextBoxNote.Size = new System.Drawing.Size(365, 157);
@@ -545,6 +548,7 @@
             // richTextBoxNote2
             // 
             this.richTextBoxNote2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.richTextBoxNote2.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxNote2.Location = new System.Drawing.Point(84, 370);
             this.richTextBoxNote2.Name = "richTextBoxNote2";
             this.richTextBoxNote2.Size = new System.Drawing.Size(222, 157);

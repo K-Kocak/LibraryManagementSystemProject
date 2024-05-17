@@ -44,7 +44,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
             this.authorIDbox = new System.Windows.Forms.Label();
             this.addBookButton = new System.Windows.Forms.Button();
@@ -183,6 +182,7 @@
             this.bookCountLabel.Size = new System.Drawing.Size(161, 24);
             this.bookCountLabel.TabIndex = 52;
             this.bookCountLabel.Text = "99999 Books";
+            this.bookCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // removeButton1
             // 
@@ -279,7 +279,6 @@
             this.panelAdd.Controls.Add(this.label16);
             this.panelAdd.Controls.Add(this.label14);
             this.panelAdd.Controls.Add(this.label13);
-            this.panelAdd.Controls.Add(this.label7);
             this.panelAdd.Controls.Add(this.clearButton);
             this.panelAdd.Controls.Add(this.authorIDbox);
             this.panelAdd.Controls.Add(this.addBookButton);
@@ -372,18 +371,6 @@
             this.label13.TabIndex = 46;
             this.label13.Text = "*";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.IndianRed;
-            this.label7.Location = new System.Drawing.Point(3, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 26);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "*";
             // 
             // clearButton
             // 
@@ -1274,7 +1261,6 @@
         private System.Windows.Forms.Button buttonEditBookData;
         private System.Windows.Forms.Button buttonRemoveBookData;
         private System.Windows.Forms.Button buttonExportBooks;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label24;

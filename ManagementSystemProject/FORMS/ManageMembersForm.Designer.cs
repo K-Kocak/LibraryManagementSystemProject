@@ -86,7 +86,7 @@
             this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.label1.Size = new System.Drawing.Size(1301, 93);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Members";
+            this.label1.Text = "Manage Members";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2

@@ -25,6 +25,8 @@ namespace ManagementSystemProject.FORMS
             dataGridViewIssuedBook.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
             dataGridViewIssuedBook.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewIssuedBook.EnableHeadersVisualStyles = false;
+            // show actual issue book count
+            bookCountLabel.Text = issueBook.IssueBookList("").Rows.Count.ToString() + " Issued Books";
         }
         private void buttonSearchBook_Click(object sender, EventArgs e)
         {

@@ -66,13 +66,15 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Cyan;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.label1.Size = new System.Drawing.Size(1095, 93);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Users";
+            this.label1.Text = "Manage Users";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dataGridViewUsers
@@ -99,12 +101,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(41, 265);
+            this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(42, 264);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 24);
+            this.label5.Size = new System.Drawing.Size(105, 23);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Username:";
+            this.label5.Text = "Username :";
             // 
             // labelSurname
             // 
@@ -119,12 +121,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 217);
+            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(51, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 24);
+            this.label4.Size = new System.Drawing.Size(96, 23);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Surname:";
+            this.label4.Text = "Surname :";
             // 
             // labelFirstname
             // 
@@ -149,22 +151,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 169);
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 170);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 24);
+            this.label3.Size = new System.Drawing.Size(114, 23);
             this.label3.TabIndex = 15;
-            this.label3.Text = "First Name:";
+            this.label3.Text = "First Name :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(111, 121);
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(104, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 24);
+            this.label2.Size = new System.Drawing.Size(43, 23);
             this.label2.TabIndex = 14;
-            this.label2.Text = "ID:";
+            this.label2.Text = "ID :";
             // 
             // labelPassword
             // 
@@ -180,12 +182,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(46, 313);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 24);
+            this.label6.Size = new System.Drawing.Size(102, 23);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Password:";
+            this.label6.Text = "Password :";
             // 
             // labelPassword2
             // 
@@ -201,32 +203,33 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 361);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 24);
+            this.label7.Size = new System.Drawing.Size(137, 23);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Re-Type Pass:";
+            this.label7.Text = "Re-Type Pass :";
             // 
             // checkBoxAdmin
             // 
             this.checkBoxAdmin.AutoSize = true;
             this.checkBoxAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBoxAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAdmin.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxAdmin.Location = new System.Drawing.Point(151, 409);
             this.checkBoxAdmin.Name = "checkBoxAdmin";
-            this.checkBoxAdmin.Size = new System.Drawing.Size(225, 26);
+            this.checkBoxAdmin.Size = new System.Drawing.Size(221, 24);
             this.checkBoxAdmin.TabIndex = 26;
             this.checkBoxAdmin.Text = "Make this user an Admin";
             this.checkBoxAdmin.UseVisualStyleBackColor = true;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAdd.BackColor = System.Drawing.Color.YellowGreen;
             this.buttonAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Image = global::ManagementSystemProject.Properties.Resources.addbutton;
             this.buttonAdd.Location = new System.Drawing.Point(12, 502);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(129, 51);
@@ -238,11 +241,12 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonEdit.BackColor = System.Drawing.Color.Lavender;
             this.buttonEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEdit.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEdit.Image = global::ManagementSystemProject.Properties.Resources.editbutton;
             this.buttonEdit.Location = new System.Drawing.Point(149, 502);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(138, 51);
@@ -254,11 +258,12 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonDelete.BackColor = System.Drawing.Color.LightCoral;
             this.buttonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Image = global::ManagementSystemProject.Properties.Resources.deletebutton;
             this.buttonDelete.Location = new System.Drawing.Point(295, 502);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(125, 51);

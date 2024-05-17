@@ -33,11 +33,11 @@ namespace ManagementSystemProject.FORMS
                     this.Close();
                     return;
                 }
-                labelID.Text = data["id"].ToString();
-                labelFullname.Text = data["firstname"].ToString() + " " + data["surname"].ToString();
-                labelGender.Text = data["gender"].ToString();
-                labelPhone.Text = data["phone"].ToString();
-                labelEmail.Text = data["email"].ToString();
+                labelID.Text = "ID : " + data["id"].ToString();
+                labelFullname.Text = "Full Name : " + data["firstname"].ToString() + " " + data["surname"].ToString();
+                labelGender.Text = "Gender : " + data["gender"].ToString();
+                labelPhone.Text = "Phone : " + data["phone"].ToString();
+                labelEmail.Text = "Email : " + data["email"].ToString();
                 byte[] cover = (byte[])data["picture"];
                 MemoryStream ms = new MemoryStream(cover);
                 pictureBoxMemberPic.Image = Image.FromStream(ms);
