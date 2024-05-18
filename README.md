@@ -69,7 +69,8 @@ User enters information about a book they want added to the database. Code sorts
 ![Author list](./docs/readme/AuthorListFormPicture.png)
 
 Shows all authors in the database.
--User selects relevant author and clicks the button at the bottom.
+- User selects relevant author and clicks the button at the bottom.
+
 
 
 *Manage Books - Edit Book*
@@ -175,7 +176,7 @@ Displays all the information about a selected book. Literally everything, includ
 
 ![circulation member information](./docs/readme/CirculationMemberInfoPicture.png)
 
-Similar to book information -- displays information about the member, with their picture displayed on the left.
+Similar to book information, displays information about the member, with their picture displayed on the left.
 
 
 *Circulation - Return a Book*
