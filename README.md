@@ -210,5 +210,4 @@ Manage the users that will use this application. Only an "owner" user type can a
 
 - C#
 - MySql
-
-A project made by me.
+- Visual Studio
