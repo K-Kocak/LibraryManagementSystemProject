@@ -145,11 +145,11 @@ namespace ManagementSystemProject.FORMS
 
         private void buttonExportAuthors_Click(object sender, EventArgs e)
         {
-            if(!Directory.Exists("../authors"))
+            if(!Directory.Exists("../../../authors"))
             {
-                Directory.CreateDirectory("../authors");
+                Directory.CreateDirectory("../../../authors");
             }
-            string filePath = "../authors/List.txt";
+            string filePath = "../../../authors/List.txt";
 
             if(!File.Exists(filePath))
             {
