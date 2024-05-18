@@ -25,7 +25,7 @@ A Library Management System for managing a database of books with its authors an
 
 ### Prequisites
 
-- [XAMPP Web Server](https://www.apachefriends.org/)
+- [XAMPP Web Server](https://www.apachefriends.org/) (Start Apache and MySQL, port 3306 for MySQL)
 - [MySQL Connector for .NET](https://dev.mysql.com/downloads/connector/net/)  (Project uses MySQL Connector NET 8.0.33, latest ver is 8.4.0)
 - Clone the repo with `git clone https://github.com/K-Kocak/LibraryManagementSystemProject.git`
 
