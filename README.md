@@ -1,6 +1,6 @@
 # Library Management System
 
-A Library Management System for managing a database of books with its authors and genres, and allowing these books to be issued to members.
+A Library Management System for managing a database of books with its authors and genres, and allowing these books to be issued to members and manage returned and lost books.
 
 ## Contents
 
