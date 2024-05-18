@@ -211,3 +211,5 @@ Manage the users that will use this application. Only an "owner" user type can a
 - C#
 - MySql
 - Visual Studio
+
+[Back to Top](#contents)
